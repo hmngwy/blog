@@ -45,7 +45,7 @@ cat << _EOF_
         line-height: 1.5em;
       }
       a { color: inherit; }
-      .posts { list-style: none; padding: 0; margin: 1.34em 0 1em; line-height: 1.6em; }
+      .posts { list-style: none; padding: 0; margin: 1.28em 0 1em; line-height: 1.6em; }
       .post-link { display: table; text-transform: uppercase; margin-bottom: .55em; }
       .post-link a { text-decoration: none; }
       .post-link .title:hover {  text-decoration: underline;  }
