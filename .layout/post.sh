@@ -43,10 +43,10 @@ cat << _EOF_
         .contents :first-child { margin-top: 0; }
         h1, h2, h3, h4, h5, h6 { font-size: 1em; font-weight: normal; text-transform: uppercase; margin: 2em 0 1em; }
         ol, ul { padding-left: 1em; }
-        ul.fn-list { list-style: none; padding: 1em 0 0; font-size: .9em; }
-        .fn-handle, .fn-text { display: table-cell; }
-        .fn-handle { padding-right: 1ch; }
-        .fnref { line-height: 0 }
+        .footnotes { padding: 1em 0 0; font-size: .9em; }
+        .footnotes hr { display: none; }
+        .footnotes ol { padding: 0; }
+        .footnote { vertical-align: super; font-size: .8em; text-decoration: none; line-height: 0; }
         .tags { border-top: 2px solid #EEE; margin-top: 2.5em; padding-top: 1.5em; font-size: .9em; }
         .wrap { max-width: 1024px; margin: 0 auto; }
         figure { margin: 0 }
