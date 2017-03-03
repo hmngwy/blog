@@ -1,0 +1,4 @@
+POSTS_PER_PAGE=20
+DIST=~/blog/.dist
+LAYOUT_DIR=~/blog/.layout
+MARKDOWN_COMMAND="multimarkdown "
