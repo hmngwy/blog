@@ -19,7 +19,7 @@ cat << _EOF_
           font-family: 'Fira Mono', sans-serif;
           line-height: 1.5em;
         }
-        article { padding: 0; margin: 1em 0; max-width: 70ch; }
+        article { padding: 0; margin: 1em 0; max-width: 720px; }
         article a { color: #b58900; }
         article img { max-width: 100% }
         article blockquote { border-left: 2px solid #CCC; padding: 1em; border-radius: 3px; background-color: #f4f4f4; }
@@ -39,7 +39,7 @@ cat << _EOF_
         .heading .stamp,
         .home { display: inline-block; width: 2.66em; text-align:right; margin-right: 1.5em; }
         .home { text-decoration: none; margin-bottom: 1.5em; text-align: left;  color: #cb4b16; } .home:hover { color: #dc322f; }
-        .contents { display: inline-block; max-width: 60ch; vertical-align: top; width: 100%; }
+        .contents { display: inline-block; max-width: 68ch; vertical-align: top; width: 100%; }
         .contents :first-child { margin-top: 0; }
         h1, h2, h3, h4, h5, h6 { font-size: 1em; font-weight: normal; text-transform: uppercase; margin: 2em 0 1em; }
         ol, ul { padding-left: 1em; }
