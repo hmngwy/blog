@@ -12,9 +12,10 @@ function index_loop {
 function list_item {
   if [ -z "$BREAK" ]; then
 cat << _LOOP_
-  <li class="post-link"><a href="$(echo $POST_URL)"><span class="stamp">$(echo $POST_DATE)</span> <span class="title">$(echo $POST_TITLE)</span></a></li>
+<li class="post-link $([ $InNext ] && echo "in-next")"><a href="$(echo $POST_URL)"><span class="stamp">$(echo $POST_DATE)</span> <span class="title">$(echo $POST_TITLE)</span></a></li>
 _LOOP_
   else
+    InNext=true
 cat << _LOOP_
   <li class="post-link"><a href="/page/$(echo $BREAK)">Under page $(echo $BREAK)</a></li>
 _LOOP_
@@ -45,11 +46,12 @@ cat << _EOF_
       body {
         background-color: white;
         color: #444;
-        font-size: 16px;
+        font-size: 14px;
         padding: 1em;
         font-family: 'Roboto', monospace;
         line-height: 1.5em;
       }
+      @media (min-width: 736px) { body { font-size: 16px } }
       a { color: inherit; }
       .posts { list-style: none; padding: 0; margin: 1.285em 0 1em; line-height: 1.6em; }
       .post-link { display: table; text-transform: uppercase; margin-bottom: .55em; }
@@ -62,11 +64,14 @@ cat << _EOF_
       header { text-transform: uppercase; }
       header a { text-decoration: none }
       .wrap { max-width: 1024px; margin: 0 auto; }
+      .in-next { opacity: 0.6; }
     </style>
   </head>
   <body>
     <div class="wrap">
-      $(if [ "$TAGNAME" ]; then echo "<header><a href=\"/tag/$TAGNAME\">TAG: $TAGNAME</a></header>"; fi)
+      $(if [ "$TAGNAME" ]; then echo "<header><a href=\"/tag/$TAGNAME\">Tag: $TAGNAME</a></header>"; fi)
+      $(if [ "$PAGE_NUM" ]; then echo "<header><a href=\"/page/$PAGE_NUM.html\">Page $PAGE_NUM</a></header>"; fi)
+
       <ul class="posts">
         $(index_loop)
       </ul>
