@@ -36,7 +36,7 @@ I actually already know this, but it's worth writing down. When you work out, yo
 
 ### Abs
 
-Abs is a different kind of muscle such that it's hard to effectively "load" it with weights such that you can train it. I'm not saying there's none, but there's usually some other muscle that's helping carrying the load even with the best mind-muscle connection. 
+The core is a different kind of muscle group in the way that it's hard to effectively "load" it with weights such that you can train it. I'm not saying there's none, but there's usually some other muscle that's helping carrying the load even with the best mind-muscle connection. 
 
 One way of making sure you tear enough muscle tissue in your core to encourage gains, is to have massive time under tension. Do this by reducing rests, and increasing time in the eccentric movements. Do as much core work as you can, take a break a day before and after Legs and Abs day. 
 
@@ -46,3 +46,4 @@ Finally, stretches. When I started working out I didn't bother stretching, nor w
 
 Learn dynamic stretches and do them habitually, even just at home. Now I can't go into an exercise without stretching, it just feels wrong to put sustained stress on your muscles and joints without preparing them. And warm up with an empty bar or light weight before each exercise, it's the perfect time to practice form without weight getting in the way.
 
+tags: fitness
