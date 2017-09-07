@@ -4,7 +4,7 @@ I was never a fan of the flash, I believed it was best left for people who actua
 
 Recently I've taken this photo of my niece using an iPhone 6, to assist the focus I thought I'd use the flash as I didn't care for quality at the time.
 
-![](https://i.imgsafe.org/5106ed47a1.jpg)
+![](/images/iphone-camera-lit/IMG_0306.JPG)
 
 The focus isn't spot on, but sure is better than without the flash. Granted she's a joyous little kid jumping around, an iPhone's autofocus is no match. Even a mid-range DSLR would struggle. Her face is pretty well lit, it didn't take much to balance the skin tone as well. I thought that this is a decent family-album type picture, a keeper, and I was satisfied with finally a decent night photo on my smartphone.
 
@@ -12,19 +12,27 @@ We continued to mess around with the camera and my little niece kept striking 10
 
 This is the SOOC product. I was pleasantly surprised. 
 
-![](https://i.imgsafe.org/5106d3d2d7.jpg)
+![](/images/iphone-camera-lit/IMG_0314.JPG)
 
 It's not the best photo, but for one made on a smartphone, at dead of night it's pretty amazing. Here's the final edit, and other shots that made the cut.
 
-![](https://i.imgsafe.org/5106952759.jpg)
+![](/images/iphone-camera-lit/IMG_0838.JPG)
 
-![](https://i.imgsafe.org/51067bed07.jpg)
+![](/images/iphone-camera-lit/IMG_0836.JPG)
 
-![](https://i.imgsafe.org/51068a02a2.jpg)
+![](/images/iphone-camera-lit/IMG_0835.JPG)
+
+![](/images/iphone-camera-lit/IMG_0841.JPG)
+
+![](/images/iphone-camera-lit/IMG_0840.JPG)
+
+![](/images/iphone-camera-lit/IMG_0839.JPG)
+
+![](/images/iphone-camera-lit/IMG_0838.JPG)
 
 If you've ever wondered how you could possibly tolerate your smartphone's camera output in the night, just turn on the flash and work with its limitations. Or better yet, buy a portable LED matrix to light shots off-camera for more flexibility[^1].
 
 [^1]: The day after this I ordered a [Yongnuo YN 06](https://www.amazon.com/YONGNUO-Portable-Pocket-EACHSHOT-Cleaning/dp/B01AXP3D78).
 
 
-tags: photography
+tags: photography iphone vsco

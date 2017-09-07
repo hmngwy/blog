@@ -28,13 +28,13 @@ cat << _EOF_
         article pre { margin: 0; border-bottom: 1px solid #DDD; }
         article pre,
         article code { background-color: #f4f4f4; border-radius: 3px; font-family: 'Fira Mono'; font-size: 14px; display: inline-block; color: #333; }
-        article pre { word-break: break-all; white-space: pre-wrap; }
+        article pre { word-break: break-all; width: 100%; }
         article blockquote :first-of-type { margin-top: 0; }
         article blockquote :last-of-type { margin-bottom: 0; }
         article hr { border: 0; border-bottom: 3px solid #CCC; }
         .heading { font-family: 'Roboto'; }
         .heading a { text-decoration: none; }
-        .heading .title { max-width: 600px; font-size: 1.5em; color: #222; display: inline-block; text-transform: initial; margin: 0 0 1em; font-weight:bold; line-height:1.25em  }
+        .heading .title { max-width: 600px; font-size: 1.4em; color: #222; display: inline-block; text-transform: initial; margin: 0 0 1em; font-weight:bold; line-height:1.25em  }
         .heading .title:hover { text-decoration: underline; }
         .heading .stamp { color: #999; }
         .heading .stamp,
@@ -42,7 +42,7 @@ cat << _EOF_
         .home { text-decoration: none; margin-bottom: 1.5em; text-align: left;  color: #cb4b16; } .home:hover { color: #dc322f; }
         .contents { display: inline-block; max-width: 68ch; vertical-align: top; width: 100%; }
         .contents :first-child { margin-top: 0; }
-        h1, h2, h3, h4, h5, h6 { font-size: 1.5em; font-weight: bold; text-transform: uppercase; margin: 2em 0 1em; }
+        h1, h2, h3, h4, h5, h6 { font-size: 1.4em; font-weight: bold; text-transform: uppercase; margin: 2em 0 1em; }
         h3, h4, h5, h6 { font-size: 1.25em; }
         h4, h5, h6 { font-size: 1em; }
         ol, ul { padding-left: 1em; }
@@ -51,6 +51,7 @@ cat << _EOF_
         .footnotes ol { padding: 0; }
         .footnote { vertical-align: super; font-size: .8em; text-decoration: none; line-height: 0; }
         .tags { border-top: 2px solid #EEE; margin-top: 2.5em; padding-top: 1.5em; font-size: .9em; }
+        .tags a { background-color: #EEE; display:inline-block;padding: 0 .5em;border-radius: 4px; }
         .wrap { max-width: 1024px; margin: 0 auto; }
         figure { margin: 0 }
         .hljs { background-color: #fbfbfb; }
