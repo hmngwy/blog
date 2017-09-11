@@ -1,5 +1,5 @@
 POSTS_PER_PAGE=20
-DIST=~/blog/.dist
-LAYOUT_DIR=~/blog/.layout
+DIST=./.dist
+LAYOUT_DIR=./.layout
+STATIC_DIRS="static images"     
 MARKDOWN_COMMAND="multimarkdown "
-STATIC_DIRS="static images"
