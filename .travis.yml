@@ -1,0 +1,17 @@
+language: bash
+
+before_script:
+	- sudo apt-get -qq update
+	- sudo apt-get install -y multimarkdown
+	- git clone https://github.com/hmngwy/jenny.git /tmp/jenny
+	- (cd /tmp/jenny/; make install)
+
+script:
+	- jenny
+
+deploy:
+	provider: pages
+	skip_cleanup: true
+	github_token: $GITHUB_TOKEN
+	on:
+		branch: gh-pages 
