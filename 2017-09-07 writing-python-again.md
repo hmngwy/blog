@@ -24,4 +24,4 @@ Of course, [virtualenvwrapper](https://virtualenvwrapper.readthedocs.io/en/lates
 
 New to testing in Python, because I used to just fuck around with non-distributable code. But [pytest](http://pytest.org) is fun with the [assert](https://docs.pytest.org/en/latest/assert.html) lines.
 
-tags: python
+Tags: python
