@@ -1,10 +1,12 @@
-# The 2017 Python Setup
+# The Updated 2017 Python Setup
+
+Updated: Sep 9, 2017
 
 Oh what a time to be a Python dev.
 
 ### Neovim
 
-I use [neomake](https://github.com/neomake/neomake) to run my linters, after a friend berated me for using syntastic, which was in fact [reasonable](https://github.com/vim-syntastic/syntastic/issues/542). Linters are [flake8](http://flake8.pycqa.org) with the [flake8-docstrings](https://pypi.python.org/pypi/flake8-docstrings) extension.
+I use [neomake](https://github.com/neomake/neomake) to run my linters, after a friend berated me for using syntastic, which was in fact [reasonable](https://github.com/vim-syntastic/syntastic/issues/542). Linters are [pylint](https://pypi.python.org/pypi/pylint) for syntax checking, [pycodestyle](https://pypi.python.org/pypi/pycodestyle) for PEP8 conformity, and [pydocstyle](https://pypi.python.org/pypi/pydocstyle) for PEP257 conformity.
 
 To assist me with the nearly invisible [PEP8](https://www.python.org/dev/peps/pep-0008/) requirements, I use autopep8 loaded on vim via [neoformat](https://github.com/sbdchd/neoformat).
 
