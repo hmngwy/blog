@@ -12,6 +12,7 @@ script:
   - jenny
 
 deploy:
+  fqdn: manilafunctional.com
   provider: pages
   local_dir: .dist
   skip_cleanup: true
