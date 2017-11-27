@@ -1,13 +1,13 @@
 # Every Static Site Workflow Ever
 
-Except mine runs my own blog generator. 
+Except mine runs my own blog generator.
 
 ### Editing
 
 iA Writer > [TIG](TIG - Git Client by Seokhyeon Nam
 https://itunes.apple.com/us/app/tig-git-client/id1161732225?mt=8) [^1]
 
-I prefer writing in iA Writer on the iPad, it's simple, it's multimarkdown, and I've had it since version 1 on an iPhone 4s. 
+I prefer writing in iA Writer on the iPad, it's simple, it's multimarkdown, and I've had it since version 1 on an iPhone 4s.
 
 ### Publishing
 
@@ -42,3 +42,6 @@ deploy:
 
 
 [^1]: I've tried Git2Go, iOS Locations don't work, and the last update was last May. Also tried Working Copy, but the UI is just embarrassing to use around designers, and such a pain to use.
+
+
+Tags: blogging
