@@ -40,18 +40,19 @@ cat << _EOF_
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
     <title>Manila Functional</title>
-    <link href="https://fonts.googleapis.com/css?family=Fira+Mono:400,700|Roboto:400,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Overpass+Mono:400,700" rel="stylesheet">
     <link href="data:image/x-icon;base64,AAABAAEAEBAQAAEABAAoAQAAFgAAACgAAAAQAAAAIAAAAAEABAAAAAAAgAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAANjY2AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAARERERAAAAAAAAAAAAAAAAEQEBEQAAAAAAAAAAAAAAABEREREAAAAAAAAAAAAAAAARAREBAAAAAAAAAAAAAAAAEREBEQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD//wAA//8AAP//AADwDwAA//8AAPKPAAD//wAA8A8AAP//AADyLwAA//8AAPCPAAD//wAA//8AAP//AAD//wAA" rel="icon" type="image/x-icon">
     <style>
       body {
         background-color: white;
-        color: #444;
+        color: #222;
         font-size: 14px;
         padding: 1em;
-        font-family: 'Roboto', monospace;
+        font-family: 'Overpass Mono', monospace;
         line-height: 1.5em;
       }
-      @media (min-width: 736px) { body { font-size: 16px } }
+      @media (min-width: 760px) { body { font-size: 15px } }
+      @media (min-width: 1367px) { body { font-size: 16px } }
       a { color: inherit; }
       .posts { list-style: none; padding: 0; margin: 1.285em 0 1em; line-height: 1.6em; }
       .post-link { display: table; text-transform: uppercase; margin-bottom: .55em; }

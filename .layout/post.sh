@@ -7,40 +7,41 @@ cat << _EOF_
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
       <title>$(echo $POST_TITLE) - Manila Functional</title>
-      <link href="https://fonts.googleapis.com/css?family=Fira+Mono:400,700|Roboto:400,700" rel="stylesheet">
+      <link href="https://fonts.googleapis.com/css?family=Overpass+Mono:400,700" rel="stylesheet">
       <link href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/styles/arduino-light.min.css" rel="stylesheet">
       <link href="data:image/x-icon;base64,AAABAAEAEBAQAAEABAAoAQAAFgAAACgAAAAQAAAAIAAAAAEABAAAAAAAgAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAANjY2AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAARERERAAAAAAAAAAAAAAAAEQEBEQAAAAAAAAAAAAAAABEREREAAAAAAAAAAAAAAAARAREBAAAAAAAAAAAAAAAAEREBEQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD//wAA//8AAP//AADwDwAA//8AAPKPAAD//wAA8A8AAP//AADyLwAA//8AAPCPAAD//wAA//8AAP//AAD//wAA" rel="icon" type="image/x-icon">
       <style>
         body {
           background-color: white;
-          color: #444;
+          color: #222;
           font-size: 14px;
           padding: 1em;
-          font-family: 'Fira Mono', sans-serif;
+          font-family: 'Overpass Mono', sans-serif;
           line-height: 1.5em;
         }
-        @media (min-width: 736px) { body { font-size: 16px } }
-        article { padding: 0; margin: 1em 0; max-width: 720px; }
+        @media (min-width: 760px) { body { font-size: 15px } }
+        @media (min-width: 1367px) { body { font-size: 16px } }
+        article { padding: 0; margin: 1em 0; max-width: 860px; }
         article a { color: #b58900; }
         article img { max-width: 100% }
         article blockquote { border-left: 2px solid #CCC; padding: 1em; border-radius: 3px; background-color: #f4f4f4; }
         article blockquote,
         article pre { margin: 0; border-bottom: 1px solid #DDD; }
         article pre,
-        article code { background-color: #f4f4f4; border-radius: 3px; font-family: 'Fira Mono'; font-size: 14px; display: inline-block; color: #333; }
+        article code { background-color: #f4f4f4; border-radius: 3px; font-family: 'Overpass Mono'; font-size: 14px; display: inline-block; color: #333; }
         article pre { word-break: break-all; width: 100%; }
         article blockquote :first-of-type { margin-top: 0; }
         article blockquote :last-of-type { margin-bottom: 0; }
         article hr { border: 0; border-bottom: 3px solid #CCC; }
-        .heading { font-family: 'Roboto'; }
-        .heading a { text-decoration: none; }
+        .heading { font-family: 'Overpass Mono'; }
+        .heading a { text-decoration: none; text-transform: uppercase; }
         .heading .title { max-width: 600px; font-size: 1.4em; color: #222; display: inline-block; text-transform: initial; margin: 0 0 1em; font-weight:bold; line-height:1.25em  }
         .heading .title:hover { text-decoration: underline; }
         .heading .stamp { color: #999; }
         .heading .stamp,
         .home { display: inline-block; width: 2.66em; text-align:right; margin-right: 1.5em; }
         .home { text-decoration: none; margin-bottom: 1.5em; text-align: left;  color: #cb4b16; } .home:hover { color: #dc322f; }
-        .contents { display: inline-block; max-width: 68ch; vertical-align: top; width: 100%; }
+        .contents { display: inline-block; max-width: 79ch; vertical-align: top; width: 100%; }
         .contents :first-child { margin-top: 0; }
         h1, h2, h3, h4, h5, h6 { font-size: 1.4em; font-weight: bold; text-transform: uppercase; margin: 2em 0 1em; }
         h3, h4, h5, h6 { font-size: 1.25em; }
