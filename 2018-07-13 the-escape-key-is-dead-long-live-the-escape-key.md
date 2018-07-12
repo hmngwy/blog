@@ -42,3 +42,5 @@ Some true facts:
 - Which means this post was a PITA to write
 
 [^1]: [Avoid the escape key →](http://vim.wikia.com/wiki/Avoid_the_escape_key)
+
+tags: vim
