@@ -1,6 +1,5 @@
 # Writing Python in 2018
 
-
 ### Use Python 3
 
 Use Python 3.

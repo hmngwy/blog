@@ -35,7 +35,7 @@ cat << _EOF_
         article hr { border: 0; border-bottom: 3px solid #CCC; }
         .heading { font-family: 'Overpass Mono'; }
         .heading a { text-decoration: none; }
-        .heading .title { max-width: 600px; font-size: 1.4em; color: #222; display: inline-block; text-transform: uppercase; margin: 0 0 1em; font-weight:bold; line-height:1.25em  }
+        .heading .title { max-width: 650px; font-size: 1.4em; color: #222; display: inline-block; text-transform: uppercase; margin: 0 0 1em; font-weight:bold; line-height:1.25em  }
         .heading .title:hover { text-decoration: underline; }
         .heading .stamp { color: #999; }
         .heading .stamp,
