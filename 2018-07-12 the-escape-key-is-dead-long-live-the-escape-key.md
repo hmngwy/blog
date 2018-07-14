@@ -1,6 +1,6 @@
 # The escape key is dead, long live the escape key
 
-My leader key in vim is `\`. Ever since I've made this change, I've mapped `leader-\` to save the current buffer to file. This means, in normal mode I can swiftly save by hitting `\\`.
+My leader key in vim is ` \ `. Ever since I've made this change, I've mapped ` leader-\ ` to save the current buffer to file. This means, in normal mode I can swiftly save by hitting ` \\ `.
 
 I have been reliant on the esc key to get out of insert mode ever since I started using vim. Apparently, it is no longer considered wise to use this key, as the design no longer fits today's keyboards.
 
@@ -15,7 +15,7 @@ NORMAL MODE `\\` - Save buffer file
 
 The corresponding `.vimrc`/`init.vim` setting are like so.
 
-```text
+```
 " Change global timeout
 set timeoutlen=350
 
