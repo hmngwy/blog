@@ -52,7 +52,7 @@ cat << _EOF_
         .footnotes hr { display: none; }
         .footnotes ol { padding-left: 2.85em; }
         .footnote { vertical-align: super; font-size: .8em; text-decoration: none; line-height: 0; }
-        .tags { border-top: 1px solid #EEE; margin-top: 2.5em; padding-top: .5em; font-size: .9em; }
+        .tags { margin-top: 3em; font-size: .9em; }
         .tags a { background-color: #EEE; display:inline-block;padding: 0 .5em;border-radius: 4px; }
         .wrap { max-width: 1024px; margin: 0 auto; }
         figure { margin: 0 }
