@@ -17,7 +17,7 @@ _LOOP_
   else
     InNext=true
 cat << _LOOP_
-  <li class="post-link"><a href="/page/$(echo $BREAK)">Under page $(echo $BREAK)</a></li>
+  <li class="post-link"><a href="/page/$(echo $BREAK).html">Under page $(echo $BREAK)</a></li>
 _LOOP_
   fi
 }
@@ -63,15 +63,16 @@ cat << _EOF_
       nav a { color: #555; text-decoration: none; } nav a:hover { color: #268bd2}
       nav a+a:before { content: ' • '; }
       header { text-transform: uppercase; }
-      header a { text-decoration: none }
+      header a { text-decoration: none } header a:hover { color: #268bd2}
       .wrap { max-width: 1024px; margin: 0 auto; }
       .in-next { opacity: 0.6; }
+      .home { position:absolute; margin: 0 -1.25em 0; }
     </style>
   </head>
   <body>
     <div class="wrap">
-      $(if [ "$TAGNAME" ]; then echo "<header><a href=\"/tag/$TAGNAME\">Tag: $TAGNAME</a></header>"; fi)
-      $(if [ "$PAGE_NUM" ]; then echo "<header><a href=\"/page/$PAGE_NUM.html\">Page $PAGE_NUM</a></header>"; fi)
+      $(if [ "$TAGNAME" ]; then echo "<header><a href="/" class="home"> / </a> TAG - <a href=\"/tag/$TAGNAME\">$TAGNAME</a></header>"; fi)
+      $(if [ "$PAGE_NUM" ]; then echo "<header><a href="/" class="home"> / </a> <a href=\"/page/$PAGE_NUM.html\">Page $PAGE_NUM</a></header>"; fi)
 
       <ul class="posts">
         $(index_loop)
