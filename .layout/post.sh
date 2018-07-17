@@ -23,11 +23,11 @@ cat << _EOF_
         article { padding: 0; margin: 1.3em 0; max-width: 87ch; }
         article a { color: #b58900; }
         article img { max-width: 100% }
-        article blockquote { border-left: 2px solid #CCC; padding: 1em; border-radius: 3px; background-color: #f4f4f4; }
+        article blockquote { border-left: 2px solid #CCC; padding: 2ch; border-radius: 3px; background-color: #f4f4f4; }
         article blockquote,
         article pre { margin: 0; border-bottom: 1px solid #DDD; }
         article pre,
-        article code { background-color: #f4f4f4; border-radius: 3px; font-family: 'Overpass Mono'; display: inline-block; color: #333; }
+        article code { background-color: #f4f4f4; border-radius: 3px; font-family: 'Overpass Mono'; color: #333; }
         article pre { word-break: break-all; width: 100%; }
         article blockquote :first-of-type { margin-top: 0; }
         article blockquote :last-of-type { margin-bottom: 0; }
@@ -40,22 +40,25 @@ cat << _EOF_
         .heading .stamp,
         .home { display: inline-block; width: 5ch; text-align:right; margin-right: 2ch; }
         .home { text-decoration: none; margin-bottom: 1.5em; text-align: left;  color: #cb4b16; } .home:hover { color: #dc322f; }
+        .contents > * { margin: 2ch 0; }
         .contents { display: inline-block; max-width: 80ch; vertical-align: top; width: 100%; }
         .contents :first-child { margin-top: 0; }
         h1, h2, h3, h4, h5, h6 { font-size: 1.4em; font-weight: bold; text-transform: uppercase; margin: 2em 0 1em; }
         h3, h4, h5, h6 { font-size: 1.25em; }
         h4, h5, h6 { font-size: 1em; }
-        ol, ul { padding-left: 1.75em; }
-        .footnotes { padding: 1em 0 0; font-size: .9em; }
+        ul { padding-left: 1.75em; } ol { padding-left: 2.75em; }
+        .footnotes { padding: 1em 0 0; font-size: .85em; }
         .footnotes:before { content: 'FOOTNOTES' }
         .footnotes hr { display: none; }
         .footnotes ol { padding-left: 2.85em; }
-        .footnote { vertical-align: super; font-size: .8em; text-decoration: none; line-height: 0; }
-        .tags { margin-top: 3em; font-size: .9em; }
+        .footnote { vertical-align: super; font-size: .85em; text-decoration: none; line-height: 0; }
+        .tags { margin-top: 3em; font-size: .85em; }
         .tags a { background-color: #EEE; display:inline-block;padding: 0 .5em;border-radius: 4px; }
         .wrap { max-width: 1024px; margin: 0 auto; }
         figure { margin: 0 }
         .hljs { background-color: #fbfbfb; }
+        footer { margin-top: 5ch; padding-left: 7ch; } footer a { color: inherit; }
+        footer span { font-size:.85em; color: grey; }
       </style>
     </head>
     <body>
@@ -67,6 +70,7 @@ cat << _EOF_
           <div class="tags">$(for i in $TAGS; do echo "<a href=\"/tag/$i\">$i</a>"; done;)</div>
           </div>
         </article>
+        <footer><span>generated with <a href="https://github.com/hmngwy/jenny">jenny</a></span></footer>
       </div>
       <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/highlight.min.js"></script>
       <script>hljs.initHighlightingOnLoad();</script>

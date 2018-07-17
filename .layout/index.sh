@@ -66,6 +66,8 @@ cat << _EOF_
       .wrap { max-width: 1024px; margin: 0 auto; }
       .in-next { opacity: 0.6; }
       .home { position:absolute; margin: 0 -1.25em 0; }
+      footer { margin-top: 5ch; padding-left: 7ch; } footer a { color: inherit; }
+      footer span { font-size:.85em; color: grey; }
     </style>
   </head>
   <body>
@@ -77,6 +79,8 @@ cat << _EOF_
         $(index_loop)
       </ul>
       $(nav)
+
+      <footer><span>generated with <a href="https://github.com/hmngwy/jenny">jenny</a></span></footer>
     </div>
   </body>
 </html>
