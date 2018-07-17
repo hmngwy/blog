@@ -14,34 +14,33 @@ cat << _EOF_
         body {
           background-color: white;
           color: #222;
-          font-size: 14px;
+          font-size: 16px;
           padding: 1em;
           font-family: 'Overpass Mono', sans-serif;
-          line-height: 1.5em;
+          line-height: 3ch;
         }
-        @media (min-width: 760px) { body { font-size: 15px } }
-        @media (min-width: 1367px) { body { font-size: 16px } }
-        article { padding: 0; margin: 1.07em 0; max-width: 860px; }
+        @media (min-width: 760px) { body { font-size: 17px } }
+        article { padding: 0; margin: 1.3em 0; max-width: 87ch; }
         article a { color: #b58900; }
         article img { max-width: 100% }
         article blockquote { border-left: 2px solid #CCC; padding: 1em; border-radius: 3px; background-color: #f4f4f4; }
         article blockquote,
         article pre { margin: 0; border-bottom: 1px solid #DDD; }
         article pre,
-        article code { background-color: #f4f4f4; border-radius: 3px; font-family: 'Overpass Mono'; font-size: 14px; display: inline-block; color: #333; }
+        article code { background-color: #f4f4f4; border-radius: 3px; font-family: 'Overpass Mono'; display: inline-block; color: #333; }
         article pre { word-break: break-all; width: 100%; }
         article blockquote :first-of-type { margin-top: 0; }
         article blockquote :last-of-type { margin-bottom: 0; }
         article hr { border: 0; border-bottom: 3px solid #CCC; }
         .heading { font-family: 'Overpass Mono'; }
         .heading a { text-decoration: none; }
-        .heading .title { max-width: 650px; font-size: 1.4em; color: #222; display: inline-block; text-transform: uppercase; margin: 0 0 1em; font-weight:bold; line-height:1.25em  }
+        .heading .title { max-width: 650px; font-size: inherit; color: #222; display: inline-block; text-transform: uppercase; margin: 0 0 1em; font-weight:bold; line-height:1.25em  }
         .heading .title:hover { text-decoration: underline; }
         .heading .stamp { color: #999; }
         .heading .stamp,
-        .home { display: inline-block; width: 2.66em; text-align:right; margin-right: 1.5em; }
+        .home { display: inline-block; width: 5ch; text-align:right; margin-right: 2ch; }
         .home { text-decoration: none; margin-bottom: 1.5em; text-align: left;  color: #cb4b16; } .home:hover { color: #dc322f; }
-        .contents { display: inline-block; max-width: 79ch; vertical-align: top; width: 100%; }
+        .contents { display: inline-block; max-width: 80ch; vertical-align: top; width: 100%; }
         .contents :first-child { margin-top: 0; }
         h1, h2, h3, h4, h5, h6 { font-size: 1.4em; font-weight: bold; text-transform: uppercase; margin: 2em 0 1em; }
         h3, h4, h5, h6 { font-size: 1.25em; }

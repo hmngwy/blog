@@ -46,19 +46,18 @@ cat << _EOF_
       body {
         background-color: white;
         color: #222;
-        font-size: 14px;
+        font-size: 16px;
         padding: 1em;
         font-family: 'Overpass Mono', monospace;
-        line-height: 1.5em;
+        line-height: 1.75em;
       }
-      @media (min-width: 760px) { body { font-size: 15px } }
-      @media (min-width: 1367px) { body { font-size: 16px } }
+      @media (min-width: 760px) { body { font-size: 17px } }
       a { color: inherit; }
-      .posts { list-style: none; padding: 0; margin: 1.285em 0 1em; line-height: 1.6em; }
+      .posts { list-style: none; padding: 0; margin: 1.285em 0 1em; line-height: 3ch; }
       .post-link { display: table; text-transform: uppercase; margin-bottom: .55em; }
       .post-link a { text-decoration: none; }
       .post-link .title:hover {  text-decoration: underline;  }
-      .post-link .stamp { color: #999; display: table-cell; width: 2.25em; text-align:right; padding-right: 1.5em; }
+      .post-link .stamp { color: #999; display: table-cell; width: 5ch; text-align:right; padding-right: 2ch; }
       .post-link .title { color: #333; display: table-cell; vertical-align: top;font-weight: bold; }
       nav a { color: #555; text-decoration: none; } nav a:hover { color: #268bd2}
       nav a+a:before { content: ' • '; }
