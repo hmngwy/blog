@@ -20,8 +20,8 @@ cat << _EOF_
           line-height: 3ch;
         }
         @media (min-width: 760px) { body { font-size: 17px } }
-        article { padding: 0; margin: 1.3em 0; max-width: 87ch; }
-        article a { color: #b58900; }
+        article { padding: 0; margin: 1.2em 0; max-width: 87ch; }
+        article a { color: #b58900; display: inline-block; }
         article img { max-width: 100% }
         article blockquote { border-left: 2px solid #CCC; padding: 2ch; border-radius: 3px; background-color: #f4f4f4; }
         article blockquote,
@@ -32,20 +32,29 @@ cat << _EOF_
         article blockquote :first-of-type { margin-top: 0; }
         article blockquote :last-of-type { margin-bottom: 0; }
         article hr { border: 0; border-bottom: 3px solid #CCC; }
-        .heading { font-family: 'Overpass Mono'; }
+        .heading { font-family: 'Overpass Mono'; margin-bottom: 2ch; }
         .heading a { text-decoration: none; }
-        .heading .title { max-width: 650px; font-size: inherit; color: #222; display: inline-block; text-transform: uppercase; margin: 0 0 1em; font-weight:bold; line-height:1.25em  }
+        .heading .title { max-width: 650px; font-size: inherit; color: #222; display: table-cell; text-transform: uppercase; margin: 0 0 1em; font-weight:bold; line-height: 2.5ch;  }
         .heading .title:hover { text-decoration: underline; }
-        .heading .stamp { color: #999; }
-        .heading .stamp,
         .home { display: inline-block; width: 5ch; text-align:right; margin-right: 2ch; }
+        .heading .stamp { color: #999; display: table-cell; width: 5ch; text-align:right; padding-right: 2ch; }
         .home { text-decoration: none; margin-bottom: 1.5em; text-align: left;  color: #cb4b16; } .home:hover { color: #dc322f; }
         .contents > * { margin: 2ch 0; }
         .contents { display: inline-block; max-width: 80ch; vertical-align: top; width: 100%; }
         .contents :first-child { margin-top: 0; }
-        h1, h2, h3, h4, h5, h6 { font-size: 1.4em; font-weight: bold; text-transform: uppercase; margin: 2em 0 1em; }
-        h3, h4, h5, h6 { font-size: 1.25em; }
-        h4, h5, h6 { font-size: 1em; }
+        h1, h2, h3, h4, h5, h6 { font-size: 1em; font-weight: bold; margin: 2em 0 1em; }
+        h1, h2 { text-transform: uppercase; }
+        .contents h1 { border-bottom: 2px solid grey;  }
+        .contents h2 { border-bottom: 1px solid lightgrey;  }
+        .contents h3 { margin-bottom: 0; padding-bottom: 0; }
+        .contents > h4,
+        .contents > h5,
+        .contents > h6 { margin-bottom: 0; }
+        .contents > h4 + *,
+        .contents > h5 + *,
+        .contents > h6 + * { margin-top: 0; }
+        .contents h5, .contents h6 { font-weight; normal; }
+        .contents h5, .contents h6 { font-style: italic; }
         ul { padding-left: 1.75em; } ol { padding-left: 2.75em; }
         .footnotes { padding: 1em 0 0; font-size: .85em; }
         .footnotes:before { content: 'FOOTNOTES' }
@@ -57,7 +66,7 @@ cat << _EOF_
         .wrap { max-width: 1024px; margin: 0 auto; }
         figure { margin: 0 }
         .hljs { background-color: #fbfbfb; }
-        footer { margin-top: 5ch; padding-left: 7ch; } footer a { color: inherit; }
+        footer { margin-top: 5ch; } footer a { color: inherit; }
         footer span { font-size:.85em; color: grey; }
       </style>
     </head>
@@ -65,7 +74,7 @@ cat << _EOF_
       <div class="wrap">
         <article>
         <div class="heading"><a href="$(echo $POST_URL)"><span class="stamp">$(echo $POST_DATE)</span><h1 class="title">$(echo $POST_TITLE)</h1></a></div>
-          <a href="/" class="home">←</a><div class="contents">
+          <div class="contents">
           $(echo "$POST_CONTENTS")
           <div class="tags">$(for i in $TAGS; do echo "<a href=\"/tag/$i\">$i</a>"; done;)</div>
           </div>

@@ -53,9 +53,9 @@ cat << _EOF_
       }
       @media (min-width: 760px) { body { font-size: 17px } }
       a { color: inherit; }
-      .posts { list-style: none; padding: 0; margin: 1.285em 0 1em; line-height: 3ch; }
+      .posts { list-style: none; padding: 0; margin: 1.285em 0 1em; line-height: 2.5ch; }
       .post-link { display: table; text-transform: uppercase; margin-bottom: .55em; }
-      .post-link a { text-decoration: none; }
+      .post-link a { text-decoration: none; line-height:2.5ch; display:inline-block; }
       .post-link .title:hover {  text-decoration: underline;  }
       .post-link .stamp { color: #999; display: table-cell; width: 5ch; text-align:right; padding-right: 2ch; }
       .post-link .title { color: #333; display: table-cell; vertical-align: top;font-weight: bold; }
@@ -66,14 +66,14 @@ cat << _EOF_
       .wrap { max-width: 1024px; margin: 0 auto; }
       .in-next { opacity: 0.6; }
       .home { position:absolute; margin: 0 -1.25em 0; }
-      footer { margin-top: 5ch; padding-left: 7ch; } footer a { color: inherit; }
+      footer { margin-top: 5ch; } footer a { color: inherit; }
       footer span { font-size:.85em; color: grey; }
     </style>
   </head>
   <body>
     <div class="wrap">
-      $(if [ "$TAGNAME" ]; then echo "<header><a href="/" class="home"> / </a> TAG - <a href=\"/tag/$TAGNAME\">$TAGNAME</a></header>"; fi)
-      $(if [ "$PAGE_NUM" ]; then echo "<header><a href="/" class="home"> / </a> <a href=\"/page/$PAGE_NUM.html\">Page $PAGE_NUM</a></header>"; fi)
+      $(if [ "$TAGNAME" ]; then echo "<header>TAG - <a href=\"/tag/$TAGNAME\">$TAGNAME</a></header>"; fi)
+      $(if [ "$PAGE_NUM" ]; then echo "<header><a href=\"/page/$PAGE_NUM.html\">Page $PAGE_NUM</a></header>"; fi)
 
       <ul class="posts">
         $(index_loop)
