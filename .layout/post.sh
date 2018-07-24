@@ -69,7 +69,7 @@ cat << _EOF_
         .tags a { background-color: #202020; display:inline-block;padding: 0 .5em;border-radius: 4px; }
         .wrap { max-width: 1024px; margin: 0 auto; }
         figure { margin: 0 }
-        .hljs { background-color: #202020; }
+        .hljs { background-color: #202020; padding: 2ch; }
         footer { margin-top: 5ch; } footer a { color: inherit; }
         footer span { font-size:.85em; color: grey; }
       </style>
@@ -83,7 +83,7 @@ cat << _EOF_
           <div class="tags">$(for i in $TAGS; do echo "<a href=\"/tag/$i\">$i</a>"; done;)</div>
           </div>
         </article>
-        <footer><span>generated with <a href="https://github.com/hmngwy/jenny">jenny</a></span></footer>
+        <footer><span><a href="/">home</a> - generated with <a href="https://github.com/hmngwy/jenny">jenny</a></span></footer>
       </div>
       <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/highlight.min.js"></script>
       <script>hljs.initHighlightingOnLoad();</script>
