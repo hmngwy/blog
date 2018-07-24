@@ -24,7 +24,7 @@ cat << _EOF_
           line-height: 3ch;
         }
         @media (min-width: 760px) { body { font-size: 17px } }
-        article { padding: 0; margin: 1.1em 0; max-width: 87ch; }
+        article { padding: 0; margin: 1.18em 0; max-width: 87ch; }
         article a { color: #b58900; display: inline-block; }
         article img { max-width: 100% }
         article blockquote { border-left: 1ch solid #313131; padding: 1.5ch 2ch; border-radius: 3px; background-color: #202020; }
