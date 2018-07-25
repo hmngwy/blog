@@ -123,4 +123,4 @@ This bash script can be executed with the following options `./script.sh -h hell
 
 This should be enough to get you started with a basic yet robust shell script. For additional reading, I recommend [Ten Things I Wish I’d Known About bash](https://zwischenzugs.com/2018/01/06/ten-things-i-wish-id-known-about-bash/) by zwischenzugs.
 
-tags: bash linux
+tags: bash linux 
