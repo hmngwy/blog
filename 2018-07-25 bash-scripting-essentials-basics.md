@@ -122,3 +122,5 @@ The above setup will expect an option `-h` with a parameter, and `-p` and `-j` w
 This bash script can be executed with the following options `./script.sh -h hello -i -j`. There is more to `getopts` aside from what I covered here, I'll leave it to you to learn the rest.
 
 This should be enough to get you started with a basic yet robust shell script. For additional reading, I recommend [Ten Things I Wish I’d Known About bash](https://zwischenzugs.com/2018/01/06/ten-things-i-wish-id-known-about-bash/) by zwischenzugs.
+
+tags: bash linux
