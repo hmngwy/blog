@@ -1,12 +1,9 @@
-#!/bin/bash
-
-cat << _EOF_
   <!DOCTYPE html>
   <html>
     <head>
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-      <title>$(echo $POST_TITLE) - Manila Functional</title>
+      <title>About - Manila Functional</title>
       <link href="https://fonts.googleapis.com/css?family=Overpass+Mono:400,700" rel="stylesheet">
       <link href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/styles/obsidian.min.css" rel="stylesheet">
       <link href="data:image/x-icon;base64,AAABAAEAEBAQAAEABAAoAQAAFgAAACgAAAAQAAAAIAAAAAEABAAAAAAAgAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAANjY2AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAARERERAAAAAAAAAAAAAAAAEQEBEQAAAAAAAAAAAAAAABEREREAAAAAAAAAAAAAAAARAREBAAAAAAAAAAAAAAAAEREBEQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD//wAA//8AAP//AADwDwAA//8AAPKPAAD//wAA8A8AAP//AADyLwAA//8AAPCPAAD//wAA//8AAP//AAD//wAA" rel="icon" type="image/x-icon">
@@ -77,10 +74,34 @@ cat << _EOF_
     <body>
       <div class="wrap">
         <article>
-        <div class="heading"><a href="$(echo $POST_URL)"><span class="stamp">$(echo $POST_DATE)</span><h1 class="title">$(echo $POST_TITLE)</h1></a></div>
+        <div class="heading"><a href="/post/bash-scripting-essentials-basics.html"><h1 class="title">Pat Ambrosio</h1></a></div>
           <div class="contents">
-          $(echo "$POST_CONTENTS")
-          <div class="tags">$(for i in $TAGS; do echo "<a href=\"/tag/$i\">$i</a>"; done;)</div>
+              <p>10 years application developer, 8 years system administration, 4 years infrastructure design, 2 years product development.</p>
+              <h3>Linux SysAd</h3>
+              <ul>
+                  <li>Web Server, and Relational Database Management and Performance</li>
+                  <li>Web Application Deployments and Performance</li>
+                  <li>Multi-User System Management</li>
+                  <li>Automations, Bash Scripting</li>
+                  <li>Intrusion and Malware Prevention</li>
+                  <li>Debian, RHEL</li>
+                  <li>Linux SBCs</li>
+              </ul>
+
+              <h3>AWS DevOps Engineer</h3>
+              <ul>
+                  <li>Application Isolation and Security using VPC</li>
+                  <li>Versioned Infrastructure Model and Provisioning with Cloudformation</li>
+                  <li>Serverless Application Model with Lambda Functions and API Gateway</li>
+                  <li>Demand-based Automated Scaling with EC2, and Cloudwatch</li>
+                  <li>High Availability System Design, Zero Downtime Deployments</li>
+                  <li>Continuous Integration, Continuous Delivery</li>
+                  <li>Edge Distribution with Cloudfront and Route53</li>
+                  <li>User and Application Access Management using IAM</li>
+                  <li>Email and SMS Solutions with SES</li>
+                  <li>End-user Resource Access Control with Cognito and Identity Pools</li>
+              </ul>
+
           </div>
         </article>
         <footer><span><a href="/">home</a> - <a href="/about.html">about</a> - generated with <a href="https://github.com/hmngwy/jenny">jenny</a></span></footer>
@@ -89,4 +110,5 @@ cat << _EOF_
       <script>hljs.initHighlightingOnLoad();</script>
     </body>
   </html>
-_EOF_
+
+

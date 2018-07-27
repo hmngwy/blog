@@ -84,7 +84,7 @@ cat << _EOF_
       </ul>
       $(nav)
 
-      <footer><span><a href="/">home</a> - generated with <a href="https://github.com/hmngwy/jenny">jenny</a></span></footer>
+      <footer><span><a href="/">home</a> - <a href="/about.html">about</a> - generated with <a href="https://github.com/hmngwy/jenny">jenny</a></span></footer>
     </div>
   </body>
 </html>
