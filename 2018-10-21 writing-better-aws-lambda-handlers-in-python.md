@@ -69,4 +69,4 @@ This lets you create middleware that manages the trigger's request arguments, an
 
 Right now it only provides the Base and the API Gateway handlers. I plan to add more soon, pull requests are also appreciated.
 
-tags: aws serverless python
+tags: aws serverless python mutton
