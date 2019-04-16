@@ -7,7 +7,7 @@ cat << _EOF_
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
       <title>$(echo $POST_TITLE) - Manila Functional</title>
-      <link href="https://fonts.googleapis.com/css?family=Overpass+Mono:400,700" rel="stylesheet">
+      <link href="/fira_code.css" rel="stylesheet">
       <link href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/styles/obsidian.min.css" rel="stylesheet">
       <link href="data:image/x-icon;base64,AAABAAEAEBAQAAEABAAoAQAAFgAAACgAAAAQAAAAIAAAAAEABAAAAAAAgAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAANjY2AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAARERERAAAAAAAAAAAAAAAAEQEBEQAAAAAAAAAAAAAAABEREREAAAAAAAAAAAAAAAARAREBAAAAAAAAAAAAAAAAEREBEQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD//wAA//8AAP//AADwDwAA//8AAPKPAAD//wAA8A8AAP//AADyLwAA//8AAPCPAAD//wAA//8AAP//AAD//wAA" rel="icon" type="image/x-icon">
       <style>
@@ -20,8 +20,8 @@ cat << _EOF_
           color: #c1c1c1;
           font-size: 16px;
           padding: 1em;
-          font-family: 'Overpass Mono', sans-serif;
-          line-height: 3ch;
+          font-family: 'Fira Code', sans-serif;
+          line-height: 3.14ch;
         }
         @media (min-width: 760px) { body { font-size: 17px } }
         article { padding: 0; margin: 1.18em 0; max-width: 87ch; }
@@ -31,14 +31,14 @@ cat << _EOF_
         article blockquote,
         article pre { margin: 0; }
         article pre,
-        article code { background-color: #2b2b2b; border-radius: 3px; font-family: 'Overpass Mono'; }
+        article code { background-color: #2b2b2b; border-radius: 3px; font-family: 'Fira Code'; padding: 0.4ch; }
         article pre { word-break: break-all; width: 100%; }
         article blockquote :first-of-type { margin-top: 0; }
         article blockquote :last-of-type { margin-bottom: 0; }
         article hr { border: 0; border-bottom: 3px solid #2d2d2d; }
-        .heading { font-family: 'Overpass Mono'; margin-bottom: 2ch; }
+        .heading { font-family: 'Fira Code'; margin-bottom: 2ch; }
         .heading a { text-decoration: none; }
-        .heading .title { max-width: 650px; font-size: inherit; color: #c9c9c9; display: table-cell; text-transform: uppercase; margin: 0 0 1em; font-weight:bold; line-height: 2.5ch;  }
+        .heading .title { max-width: 650px; font-size: inherit; color: #e1e1e1; display: table-cell; text-transform: uppercase; margin: 0 0 1em; font-weight:400; line-height: 2.5ch;  }
         .heading .title:hover { text-decoration: underline; }
         .home { display: inline-block; width: 5ch; text-align:right; margin-right: 2ch; }
         .heading .stamp { color: #676767; display: table-cell; width: 5ch; text-align:right; padding-right: 2ch; }
@@ -46,11 +46,11 @@ cat << _EOF_
         .contents > * { margin: 2ch 0; }
         .contents { display: inline-block; max-width: 80ch; vertical-align: top; width: 100%; }
         .contents :first-child { margin-top: 0; }
-        h1, h2, h3, h4, h5, h6 { font-size: 1em; font-weight: bold; margin: 2em 0 1em; }
-        h1, h2 { text-transform: uppercase; }
-        .contents h1 { border-bottom: 2px solid grey;  }
-        .contents h2 { border-bottom: 1px solid lightgrey;  }
-        .contents h3 { margin-bottom: 0; padding-bottom: 0; }
+        h1, h2, h3, h4, h5, h6 { font-size: 1em; font-weight: 500; margin: 2em 0 1em; }
+        h1, h2, h3 { text-transform: uppercase; margin: 3em 0 1em; }
+        .contents h1 { margin-top: 3ch; border-bottom: 2px solid grey;  }
+        .contents h2 { margin-top: 3ch; border-bottom: 1px solid lightgrey;  }
+        .contents h3 { margin-top: 3ch; margin-bottom: 0; padding-bottom: 0; }
         .contents > h4,
         .contents > h5,
         .contents > h6 { margin-bottom: 0; }

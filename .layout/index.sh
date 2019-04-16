@@ -4,7 +4,7 @@
 IFS='✂︎' read -r -a array <<< "$LIST"
 
 function index_loop {
-	for (( idx=${#array[@]}-1 ; idx>=0 ; idx-- )) ; do
+        for (( idx=${#array[@]}-1 ; idx>=0 ; idx-- )) ; do
     [ "${array[idx]}" ] && eval "${array[idx]} list_item"
   done
 }
@@ -23,14 +23,14 @@ _LOOP_
 }
 
 function nav {
-	if [ "$PAGE_OLD" ] || [ "$PAGE_NEW" ]; then
+        if [ "$PAGE_OLD" ] || [ "$PAGE_NEW" ]; then
 cat << _NAV_
     <nav>
-			$([ "$PAGE_NEW" ] && echo "<a href=\"$PAGE_NEW\">← NEWER</a>")
-			$([ "$PAGE_OLD" ] && echo "<a href=\"$PAGE_OLD\">OLDER →</a>")
-		</nav>
+                        $([ "$PAGE_NEW" ] && echo "<a href=\"$PAGE_NEW\">← NEWER</a>")
+                        $([ "$PAGE_OLD" ] && echo "<a href=\"$PAGE_OLD\">OLDER →</a>")
+                </nav>
 _NAV_
-	fi
+        fi
 }
 
 cat << _EOF_
@@ -40,7 +40,7 @@ cat << _EOF_
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
     <title>Manila Functional</title>
-    <link href="https://fonts.googleapis.com/css?family=Overpass+Mono:400,700" rel="stylesheet">
+    <link href="/fira_code.css" rel="stylesheet">
     <link href="data:image/x-icon;base64,AAABAAEAEBAQAAEABAAoAQAAFgAAACgAAAAQAAAAIAAAAAEABAAAAAAAgAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAANjY2AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAARERERAAAAAAAAAAAAAAAAEQEBEQAAAAAAAAAAAAAAABEREREAAAAAAAAAAAAAAAARAREBAAAAAAAAAAAAAAAAEREBEQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD//wAA//8AAP//AADwDwAA//8AAPKPAAD//wAA8A8AAP//AADyLwAA//8AAPCPAAD//wAA//8AAP//AAD//wAA" rel="icon" type="image/x-icon">
     <style>
       * {
@@ -52,17 +52,17 @@ cat << _EOF_
         color: #434343;
         font-size: 16px;
         padding: 1em;
-        font-family: 'Overpass Mono', monospace;
+        font-family: 'Fira Code', monospace;
         line-height: 1.75em;
       }
       @media (min-width: 760px) { body { font-size: 17px } }
       a { color: inherit; }
-      .posts { list-style: none; padding: 0; margin: 1.285em 0 1em; line-height: 2.5ch; }
+      .posts { list-style: none; padding: 0; margin: 1.33em 0 1em; line-height: 3.14ch; }
       .post-link { display: table; text-transform: uppercase; margin-bottom: .55em; }
       .post-link a { text-decoration: none; line-height:2.5ch; display:inline-block; }
       .post-link .title:hover {  text-decoration: underline;  }
       .post-link .stamp { color: #676767; display: table-cell; width: 5ch; text-align:right; padding-right: 2ch; }
-      .post-link .title { color: #c9c9c9; display: table-cell; vertical-align: top;font-weight: bold; }
+      .post-link .title { color: #e1e1e1; display: table-cell; vertical-align: top;font-weight: 400; }
       nav a { color: #555; text-decoration: none; } nav a:hover { color: #268bd2}
       nav a+a:before { content: ' • '; }
       header { text-transform: uppercase; }
