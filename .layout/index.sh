@@ -76,8 +76,10 @@ cat << _EOF_
   </head>
   <body>
     <div class="wrap">
-      $(if [ "$TAGNAME" ]; then echo "<header>TAG - <a href=\"/tag/$TAGNAME\">$TAGNAME</a></header>"; fi)
-      $(if [ "$PAGE_NUM" ]; then echo "<header><a href=\"/page/$PAGE_NUM.html\">Page $PAGE_NUM</a></header>"; fi)
+      <header><a href="/">MANILA FUNCTIONAL</a>
+      $(if [ "$TAGNAME" ]; then echo "-> TAG == <a href=\"/tag/$TAGNAME\">$TAGNAME</a>"; fi)
+      $(if [ "$PAGE_NUM" ]; then echo "-> <a href=\"/page/$PAGE_NUM.html\">Page $PAGE_NUM</a>"; fi)
+      </header>
 
       <ul class="posts">
         $(index_loop)

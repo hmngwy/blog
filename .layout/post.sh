@@ -21,10 +21,12 @@ cat << _EOF_
           font-size: 16px;
           padding: 1em;
           font-family: 'Fira Code', sans-serif;
-          line-height: 3.14ch;
+          line-height: 1.75em;
         }
         @media (min-width: 760px) { body { font-size: 17px } }
-        article { padding: 0; margin: 1.18em 0; max-width: 87ch; }
+        header { text-transform: uppercase; }
+        header a { text-decoration: none; color: rgb(67, 67, 67);; } header a:hover { color: #268bd2}
+        article { padding: 0; margin: 1.18em 0; max-width: 87ch; line-height: 3.14ch }
         article a { color: #b58900; display: inline-block; }
         article img { max-width: 100% }
         article blockquote { border-left: 1ch solid #313131; padding: 1.5ch 2ch; border-radius: 3px; background-color: #202020; }
@@ -76,6 +78,7 @@ cat << _EOF_
     </head>
     <body>
       <div class="wrap">
+        <header><a href="/">MANILA FUNCTIONAL</a></header>
         <article>
         <div class="heading"><a href="$(echo $POST_URL)"><span class="stamp">$(echo $POST_DATE)</span><h1 class="title">$(echo $POST_TITLE)</h1></a></div>
           <div class="contents">
