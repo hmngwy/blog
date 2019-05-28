@@ -2,7 +2,7 @@
 
 This is part of a series, see (Iterables)[/tag/iterables].
 
-Python list comprehension is a shorthand for generating a list, from one or more lists.
+Python list comprehension is a shorthand for generating a list, from one or more iterables.
 
 ```python
 >>> old_list = ['apple', 'banana', 'coconut']
