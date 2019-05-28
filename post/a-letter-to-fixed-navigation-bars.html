@@ -1,0 +1,108 @@
+  <!DOCTYPE html>
+  <html>
+    <head>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+      <title>A Letter to Fixed Menu Bars - Manila Functional</title>
+      <link href="/fira_code.css" rel="stylesheet">
+      <link href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/styles/obsidian.min.css" rel="stylesheet">
+      <link href="data:image/x-icon;base64,AAABAAEAEBAQAAEABAAoAQAAFgAAACgAAAAQAAAAIAAAAAEABAAAAAAAgAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAANjY2AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAARERERAAAAAAAAAAAAAAAAEQEBEQAAAAAAAAAAAAAAABEREREAAAAAAAAAAAAAAAARAREBAAAAAAAAAAAAAAAAEREBEQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD//wAA//8AAP//AADwDwAA//8AAPKPAAD//wAA8A8AAP//AADyLwAA//8AAPCPAAD//wAA//8AAP//AAD//wAA" rel="icon" type="image/x-icon">
+      <style>
+        * {
+          -webkit-font-smoothing: antialiased;
+          -moz-osx-font-smoothing: grayscale;
+        }
+        body {
+          background-color: rgb(27, 27, 27);
+          color: #c1c1c1;
+          font-size: 16px;
+          padding: 1em;
+          font-family: 'Fira Code', sans-serif;
+          line-height: 1.75em;
+        }
+        @media (min-width: 760px) { body { font-size: 17px } }
+        header { text-transform: uppercase; }
+        header a { text-decoration: none; color: rgb(67, 67, 67);; } header a:hover { color: #268bd2}
+        article { padding: 0; margin: 1.18em 0; max-width: 87ch; line-height: 3.14ch }
+        article a { color: #b58900; display: inline-block; }
+        article img { max-width: 100% }
+        article blockquote { border-left: 1ch solid #313131; padding: 1.5ch 2ch; border-radius: 3px; background-color: #202020; }
+        article blockquote,
+        article pre { margin: 0; }
+        article pre,
+        article code { background-color: #2b2b2b; border-radius: 3px; font-family: 'Fira Code'; padding: 0.4ch; }
+        article pre { word-break: break-all; width: 100%; }
+        article blockquote :first-of-type { margin-top: 0; }
+        article blockquote :last-of-type { margin-bottom: 0; }
+        article hr { border: 0; border-bottom: 3px solid #2d2d2d; }
+        .heading { font-family: 'Fira Code'; margin-bottom: 2ch; }
+        .heading a { text-decoration: none; }
+        .heading .title { max-width: 650px; font-size: inherit; color: #e1e1e1; display: table-cell; text-transform: uppercase; margin: 0 0 1em; font-weight:400; line-height: 2.5ch;  }
+        .heading .title:hover { text-decoration: underline; }
+        .home { display: inline-block; width: 5ch; text-align:right; margin-right: 2ch; }
+        .heading .stamp { color: #676767; display: table-cell; width: 5ch; text-align:right; padding-right: 2ch; }
+        .home { text-decoration: none; margin-bottom: 1.5em; text-align: left;  color: #cb4b16; } .home:hover { color: #dc322f; }
+        .contents > * { margin: 2ch 0; }
+        .contents { display: inline-block; max-width: 80ch; vertical-align: top; width: 100%; }
+        .contents :first-child { margin-top: 0; }
+        h1, h2, h3, h4, h5, h6 { font-size: 1em; font-weight: 500; margin: 2em 0 1em; }
+        h1, h2, h3 { text-transform: uppercase; margin: 3em 0 1em; }
+        .contents h1 { margin-top: 3ch; border-bottom: 2px solid grey;  }
+        .contents h2 { margin-top: 3ch; border-bottom: 1px solid lightgrey;  }
+        .contents h3 { margin-top: 3ch; margin-bottom: 0; padding-bottom: 0; }
+        .contents > h4,
+        .contents > h5,
+        .contents > h6 { margin-bottom: 0; }
+        .contents > h4 + *,
+        .contents > h5 + *,
+        .contents > h6 + * { margin-top: 0; }
+        .contents h5, .contents h6 { font-weight; normal; }
+        .contents h5, .contents h6 { font-style: italic; }
+        ul { padding-left: 1.75em; } ol { padding-left: 2.75em; }
+        .footnotes { padding: 1em 0 0; font-size: .85em; }
+        .footnotes:before { content: 'FOOTNOTES' }
+        .footnotes hr { display: none; }
+        .footnotes ol { padding-left: 2.85em; line-height: 3ch; }
+        .footnote { vertical-align: super; font-size: .85em; text-decoration: none; line-height: 0; }
+        .tags { margin-top: 3em; font-size: .85em; }
+        .tags a { background-color: #202020; display:inline-block;padding: 0 .5em;border-radius: 4px; }
+        .wrap { max-width: 1024px; margin: 0 auto; }
+        figure { margin: 0 }
+        .hljs { background-color: #202020; padding: 2ch; }
+        footer { margin-top: 5ch; } footer a { color: inherit; }
+        footer span { font-size:.85em; color: grey; }
+      </style>
+    </head>
+    <body>
+      <div class="wrap">
+        <header><a href="/">MANILA FUNCTIONAL</a></header>
+        <article>
+        <div class="heading"><a href="/post/a-letter-to-fixed-navigation-bars.html"><span class="stamp">11/10</span><h1 class="title">A Letter to Fixed Menu Bars</h1></a></div>
+          <div class="contents">
+          
+
+<h2 id="webdeveloperwhinesaboutauielement">Web Developer whines about a UI element</h2>
+
+<p>Dear Fixed menu bars,</p>
+
+<p>I think you may secretly have a problem with me and I wanted to be the bigger man and address it directly. I don&#8217;t think you believe I deserve space, screen reading space. You see, I purchased this device to read articles, and boy do I love reading, sometimes I watch video on it too, it practically delivers 1/3 of the content I consume. You see, this device is actually quite small to be consuming content from, albeit all bleeding edge and shit, the experience it delivers is in some ways a step down from the mediums it is assumed to supersede. Simply put, it&#8217;s got a tiny screen, and it sometimes unnecesarilly glows.</p>
+
+<p>You have decided to further this inconvenience by staying in place and taking up precious space, causing me to view snapshots of the world through an even tinier window. And please do not start with “but I&#8217;m here in the event you need to move along, and to remind you where you are”.</p>
+
+<p>I am a full grown man, if I am invested enough to navigate to a website I would know where I am reading an article from, and I don&#8217;t need to be reminded of the title 2 or 3 paragraphs down, at this point the title may not even matter anymore and surely I know what the article is still about - well cause I&#8217;m reading it aren&#8217;t I. Perhaps if one had forgotten what an article is about mid-skim then it must be terrible and maybe one shouldn&#8217;t be reading it, or the reader just has a short attention span and deserves the minor inconvenience of scrolling up and back to where they were.</p>
+
+<p>You may think, well &#8220;what if you need to navigate away?&#8221; I could always scroll up, and I do agree that&#8217;s probably a lousy way to do it but it feels the most natural, well then at least try to predict when I want to navigate away, like when I start scrolling up, or perhaps when I reach the end of an article, but I suppose the “Related Reading” section has beaten you to it didn’t she.</p>
+
+<p>How about when I lose interest? You&#8217;re never told of when that happens, I guess not yet, nor soon. But shouldn’t hinder your foresight. When I open an article and start scrolling downwards, that should at least mean that I am interested in reading and not navigating away, in which case you should take a temporary absence — i.e. GTFO. Take for example writing apps, when I start typing all the chrome goes away, because it can safely assume I want to write and not &#8220;open a file&#8221; or “add a heading”. In fact even the browser does that doesn&#8217;t it? Hide the address bar when the user starts scrolling down, when I am likely reading, and show up when it gets the closest indication that the user has stopped reading i.e. scrolling up ever so slightly.</p>
+
+<p>Sincerely, <br>
+No, just stop </p>
+          <div class="tags"></div>
+          </div>
+        </article>
+        <footer><span><a href="/">home</a> - <a href="/about.html">about</a> - generated with <a href="https://github.com/hmngwy/jenny">jenny</a></span></footer>
+      </div>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/highlight.min.js"></script>
+      <script>hljs.initHighlightingOnLoad();</script>
+    </body>
+  </html>

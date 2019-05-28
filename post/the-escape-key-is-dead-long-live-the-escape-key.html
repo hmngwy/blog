@@ -1,0 +1,145 @@
+  <!DOCTYPE html>
+  <html>
+    <head>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+      <title>The escape key is dead, long live the escape key - Manila Functional</title>
+      <link href="/fira_code.css" rel="stylesheet">
+      <link href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/styles/obsidian.min.css" rel="stylesheet">
+      <link href="data:image/x-icon;base64,AAABAAEAEBAQAAEABAAoAQAAFgAAACgAAAAQAAAAIAAAAAEABAAAAAAAgAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAANjY2AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAARERERAAAAAAAAAAAAAAAAEQEBEQAAAAAAAAAAAAAAABEREREAAAAAAAAAAAAAAAARAREBAAAAAAAAAAAAAAAAEREBEQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD//wAA//8AAP//AADwDwAA//8AAPKPAAD//wAA8A8AAP//AADyLwAA//8AAPCPAAD//wAA//8AAP//AAD//wAA" rel="icon" type="image/x-icon">
+      <style>
+        * {
+          -webkit-font-smoothing: antialiased;
+          -moz-osx-font-smoothing: grayscale;
+        }
+        body {
+          background-color: rgb(27, 27, 27);
+          color: #c1c1c1;
+          font-size: 16px;
+          padding: 1em;
+          font-family: 'Fira Code', sans-serif;
+          line-height: 1.75em;
+        }
+        @media (min-width: 760px) { body { font-size: 17px } }
+        header { text-transform: uppercase; }
+        header a { text-decoration: none; color: rgb(67, 67, 67);; } header a:hover { color: #268bd2}
+        article { padding: 0; margin: 1.18em 0; max-width: 87ch; line-height: 3.14ch }
+        article a { color: #b58900; display: inline-block; }
+        article img { max-width: 100% }
+        article blockquote { border-left: 1ch solid #313131; padding: 1.5ch 2ch; border-radius: 3px; background-color: #202020; }
+        article blockquote,
+        article pre { margin: 0; }
+        article pre,
+        article code { background-color: #2b2b2b; border-radius: 3px; font-family: 'Fira Code'; padding: 0.4ch; }
+        article pre { word-break: break-all; width: 100%; }
+        article blockquote :first-of-type { margin-top: 0; }
+        article blockquote :last-of-type { margin-bottom: 0; }
+        article hr { border: 0; border-bottom: 3px solid #2d2d2d; }
+        .heading { font-family: 'Fira Code'; margin-bottom: 2ch; }
+        .heading a { text-decoration: none; }
+        .heading .title { max-width: 650px; font-size: inherit; color: #e1e1e1; display: table-cell; text-transform: uppercase; margin: 0 0 1em; font-weight:400; line-height: 2.5ch;  }
+        .heading .title:hover { text-decoration: underline; }
+        .home { display: inline-block; width: 5ch; text-align:right; margin-right: 2ch; }
+        .heading .stamp { color: #676767; display: table-cell; width: 5ch; text-align:right; padding-right: 2ch; }
+        .home { text-decoration: none; margin-bottom: 1.5em; text-align: left;  color: #cb4b16; } .home:hover { color: #dc322f; }
+        .contents > * { margin: 2ch 0; }
+        .contents { display: inline-block; max-width: 80ch; vertical-align: top; width: 100%; }
+        .contents :first-child { margin-top: 0; }
+        h1, h2, h3, h4, h5, h6 { font-size: 1em; font-weight: 500; margin: 2em 0 1em; }
+        h1, h2, h3 { text-transform: uppercase; margin: 3em 0 1em; }
+        .contents h1 { margin-top: 3ch; border-bottom: 2px solid grey;  }
+        .contents h2 { margin-top: 3ch; border-bottom: 1px solid lightgrey;  }
+        .contents h3 { margin-top: 3ch; margin-bottom: 0; padding-bottom: 0; }
+        .contents > h4,
+        .contents > h5,
+        .contents > h6 { margin-bottom: 0; }
+        .contents > h4 + *,
+        .contents > h5 + *,
+        .contents > h6 + * { margin-top: 0; }
+        .contents h5, .contents h6 { font-weight; normal; }
+        .contents h5, .contents h6 { font-style: italic; }
+        ul { padding-left: 1.75em; } ol { padding-left: 2.75em; }
+        .footnotes { padding: 1em 0 0; font-size: .85em; }
+        .footnotes:before { content: 'FOOTNOTES' }
+        .footnotes hr { display: none; }
+        .footnotes ol { padding-left: 2.85em; line-height: 3ch; }
+        .footnote { vertical-align: super; font-size: .85em; text-decoration: none; line-height: 0; }
+        .tags { margin-top: 3em; font-size: .85em; }
+        .tags a { background-color: #202020; display:inline-block;padding: 0 .5em;border-radius: 4px; }
+        .wrap { max-width: 1024px; margin: 0 auto; }
+        figure { margin: 0 }
+        .hljs { background-color: #202020; padding: 2ch; }
+        footer { margin-top: 5ch; } footer a { color: inherit; }
+        footer span { font-size:.85em; color: grey; }
+      </style>
+    </head>
+    <body>
+      <div class="wrap">
+        <header><a href="/">MANILA FUNCTIONAL</a></header>
+        <article>
+        <div class="heading"><a href="/post/the-escape-key-is-dead-long-live-the-escape-key.html"><span class="stamp">07/12</span><h1 class="title">The escape key is dead, long live the escape key</h1></a></div>
+          <div class="contents">
+          
+
+<p>My leader key in vim is <code>\</code>. Ever since I&#8217;ve made this change, I&#8217;ve mapped <code>leader-\</code> to save the current buffer to file. This means, in normal mode I can swiftly save by hitting <code>\\</code>.</p>
+
+<p>I have been reliant on the esc key to get out of insert mode ever since I started using vim. Apparently, it is no longer considered wise to use this key, as the design no longer fits today&#8217;s keyboards.</p>
+
+<blockquote>
+<p>The Vi editor was originally written on an ADM-3A terminal, which had the Escape key positioned where the Tab key occurs on most modern keyboards.<a href="#fn:1" id="fnref:1" title="see footnote" class="footnote"><sup>1</sup></a></p>
+</blockquote>
+
+<p>So I want to drop this habit. I am now re-training myself to avoid the escape key. Now I can just use the default alternative which is C-[ but that&#8217;s no fun. So I decided that it&#8217;ll be like this.</p>
+
+<pre><code>INSERT MODE `\\` - Exit to NORMAL MODE
+NORMAL MODE `\\` - Save buffer file
+</code></pre>
+
+<p>The corresponding <code>.vimrc</code>/<code>init.vim</code> setting are like so.</p>
+
+<pre><code>&quot; Change global timeout
+set timeoutlen=350
+
+&quot; Set the local leader.
+let maplocalleader = &quot;|&quot;
+
+&quot; My C-[
+inoremap \\ &lt;esc&gt;
+
+&quot; Quick save
+nnoremap &lt;silent&gt; &lt;leader&gt;&lt;leader&gt; :w&lt;CR&gt;
+</code></pre>
+
+<p>The other popular alternative is to use <code>jk</code>, because it doesn&#8217;t appear in that many words, and you&#8217;re unlikely to use that combination in vim. My issue with that is that it puts a timeout on the letter j, which I don&#8217;t feel like having.</p>
+
+<p>The hope is that I get used to using <code>\\</code> and it actually doesn&#8217;t interrupt my usual work momentum. So far it&#8217;s feeling great to write with.</p>
+
+<hr />
+
+<p>Some true facts:</p>
+
+<ul>
+<li>My tmux leader is set to `</li>
+<li>This post is written in Markdown, code phrases and blocks are wrapped with `</li>
+<li>Which means this post was a PITA to write</li>
+</ul>
+
+<div class="footnotes">
+<hr />
+<ol>
+
+<li id="fn:1">
+<p><a href="http://vim.wikia.com/wiki/Avoid_the_escape_key">Avoid the escape key →</a> <a href="#fnref:1" title="return to body" class="reversefootnote">&#160;&#8617;</a></p>
+</li>
+
+</ol>
+</div>
+          <div class="tags"><a href="/tag/vim">vim</a></div>
+          </div>
+        </article>
+        <footer><span><a href="/">home</a> - <a href="/about.html">about</a> - generated with <a href="https://github.com/hmngwy/jenny">jenny</a></span></footer>
+      </div>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/highlight.min.js"></script>
+      <script>hljs.initHighlightingOnLoad();</script>
+    </body>
+  </html>

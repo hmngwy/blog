@@ -1,0 +1,189 @@
+  <!DOCTYPE html>
+  <html>
+    <head>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+      <title>Writing Python in 2018 - Manila Functional</title>
+      <link href="/fira_code.css" rel="stylesheet">
+      <link href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/styles/obsidian.min.css" rel="stylesheet">
+      <link href="data:image/x-icon;base64,AAABAAEAEBAQAAEABAAoAQAAFgAAACgAAAAQAAAAIAAAAAEABAAAAAAAgAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAANjY2AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAARERERAAAAAAAAAAAAAAAAEQEBEQAAAAAAAAAAAAAAABEREREAAAAAAAAAAAAAAAARAREBAAAAAAAAAAAAAAAAEREBEQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD//wAA//8AAP//AADwDwAA//8AAPKPAAD//wAA8A8AAP//AADyLwAA//8AAPCPAAD//wAA//8AAP//AAD//wAA" rel="icon" type="image/x-icon">
+      <style>
+        * {
+          -webkit-font-smoothing: antialiased;
+          -moz-osx-font-smoothing: grayscale;
+        }
+        body {
+          background-color: rgb(27, 27, 27);
+          color: #c1c1c1;
+          font-size: 16px;
+          padding: 1em;
+          font-family: 'Fira Code', sans-serif;
+          line-height: 1.75em;
+        }
+        @media (min-width: 760px) { body { font-size: 17px } }
+        header { text-transform: uppercase; }
+        header a { text-decoration: none; color: rgb(67, 67, 67);; } header a:hover { color: #268bd2}
+        article { padding: 0; margin: 1.18em 0; max-width: 87ch; line-height: 3.14ch }
+        article a { color: #b58900; display: inline-block; }
+        article img { max-width: 100% }
+        article blockquote { border-left: 1ch solid #313131; padding: 1.5ch 2ch; border-radius: 3px; background-color: #202020; }
+        article blockquote,
+        article pre { margin: 0; }
+        article pre,
+        article code { background-color: #2b2b2b; border-radius: 3px; font-family: 'Fira Code'; padding: 0.4ch; }
+        article pre { word-break: break-all; width: 100%; }
+        article blockquote :first-of-type { margin-top: 0; }
+        article blockquote :last-of-type { margin-bottom: 0; }
+        article hr { border: 0; border-bottom: 3px solid #2d2d2d; }
+        .heading { font-family: 'Fira Code'; margin-bottom: 2ch; }
+        .heading a { text-decoration: none; }
+        .heading .title { max-width: 650px; font-size: inherit; color: #e1e1e1; display: table-cell; text-transform: uppercase; margin: 0 0 1em; font-weight:400; line-height: 2.5ch;  }
+        .heading .title:hover { text-decoration: underline; }
+        .home { display: inline-block; width: 5ch; text-align:right; margin-right: 2ch; }
+        .heading .stamp { color: #676767; display: table-cell; width: 5ch; text-align:right; padding-right: 2ch; }
+        .home { text-decoration: none; margin-bottom: 1.5em; text-align: left;  color: #cb4b16; } .home:hover { color: #dc322f; }
+        .contents > * { margin: 2ch 0; }
+        .contents { display: inline-block; max-width: 80ch; vertical-align: top; width: 100%; }
+        .contents :first-child { margin-top: 0; }
+        h1, h2, h3, h4, h5, h6 { font-size: 1em; font-weight: 500; margin: 2em 0 1em; }
+        h1, h2, h3 { text-transform: uppercase; margin: 3em 0 1em; }
+        .contents h1 { margin-top: 3ch; border-bottom: 2px solid grey;  }
+        .contents h2 { margin-top: 3ch; border-bottom: 1px solid lightgrey;  }
+        .contents h3 { margin-top: 3ch; margin-bottom: 0; padding-bottom: 0; }
+        .contents > h4,
+        .contents > h5,
+        .contents > h6 { margin-bottom: 0; }
+        .contents > h4 + *,
+        .contents > h5 + *,
+        .contents > h6 + * { margin-top: 0; }
+        .contents h5, .contents h6 { font-weight; normal; }
+        .contents h5, .contents h6 { font-style: italic; }
+        ul { padding-left: 1.75em; } ol { padding-left: 2.75em; }
+        .footnotes { padding: 1em 0 0; font-size: .85em; }
+        .footnotes:before { content: 'FOOTNOTES' }
+        .footnotes hr { display: none; }
+        .footnotes ol { padding-left: 2.85em; line-height: 3ch; }
+        .footnote { vertical-align: super; font-size: .85em; text-decoration: none; line-height: 0; }
+        .tags { margin-top: 3em; font-size: .85em; }
+        .tags a { background-color: #202020; display:inline-block;padding: 0 .5em;border-radius: 4px; }
+        .wrap { max-width: 1024px; margin: 0 auto; }
+        figure { margin: 0 }
+        .hljs { background-color: #202020; padding: 2ch; }
+        footer { margin-top: 5ch; } footer a { color: inherit; }
+        footer span { font-size:.85em; color: grey; }
+      </style>
+    </head>
+    <body>
+      <div class="wrap">
+        <header><a href="/">MANILA FUNCTIONAL</a></header>
+        <article>
+        <div class="heading"><a href="/post/how-to-write-python-in-2018.html"><span class="stamp">12/30</span><h1 class="title">Writing Python in 2018</h1></a></div>
+          <div class="contents">
+          
+
+<h3 id="usepython3">Use Python 3</h3>
+
+<p>Use Python 3.</p>
+
+<h3 id="readpep20">Read PEP 20</h3>
+
+<p><code>python -m this</code>, every now and again.</p>
+
+<p>If there&#8217;s anything to emphasize here that directly influences day-to-day writing, they are:</p>
+
+<ul>
+<li>Explicit is better than implicit</li>
+<li>Flat is better than nested</li>
+<li>Sparse is better than dense</li>
+<li>If the implementation is hard to explain, it&#8217;s a bad idea</li>
+</ul>
+
+<h3 id="writedocstrings">Write Docstrings</h3>
+
+<p>PEP257 specifies base Docstring conventions, however format is not-included. People usually choose between reST, Google style, and Numpydoc, the latter two being the most popular.</p>
+
+<h3 id="writeexamplesandtestthem">Write Examples and &#8220;Test&#8221; Them</h3>
+
+<p><code>doctest</code> runs examples formatted like so in your Docstrings:</p>
+
+<pre><code>> factorial(5)
+120
+</code></pre>
+
+<p>If the output of the <code>&gt;</code> line equals to the following line, your example passes. It tests every line that has an expected literal result.</p>
+
+<p>This makes sure you write up to date examples, in case your API changes.</p>
+
+<h3 id="uselinters">Use Linters</h3>
+
+<p><code>flake8</code> is <code>pyflakes</code>, <code>pycodestyle</code>, and McCabe script in one. However, <code>flake8</code> does not catch some import and object issues like <code>pylint</code>, but <code>pylint</code> can be slow.</p>
+
+<p>So consider this:</p>
+
+<ul>
+<li>For real-time linting, use <code>flake8</code></li>
+<li>For on-save linting, use <code>pylint</code></li>
+</ul>
+
+<p>Additionally, I like using <code>pydocstyle</code> for consistent looking Docstrings.</p>
+
+<h4 id="isyourprojectossdoyourteammateshatelinters">Is your project OSS? Do your teammates hate linters?</h4>
+
+<p>Use <a href="http://pre-commit.com/hooks.html">pre-commit</a> hooks.</p>
+
+<p>Commit your <code>.pylintrc</code>, enforce the use of <code>pre-commit</code> hooks for <code>pylint</code>, <code>pydocstyle</code>, and <code>pycodestyle</code>.</p>
+
+<h3 id="packageyourproject">Package your Project</h3>
+
+<p>Learn how to use <code>setup.py</code>, and keep your abstract dependencies under its <code>install_requires</code>.</p>
+
+<p>Required reading: <a href="https://caremad.io/posts/2013/07/setup-vs-requirement/">setup.py vs requirements.txt</a></p>
+
+<h4 id="usepipfilesforgetrequirements.txtforgetvirtualenvs">Use Pipfiles, forget requirements.txt, forget virtualenvs</h4>
+
+<p>Install <code>pipenv</code> and never look back. This will manage your venvs and your concrete dependencies.</p>
+
+<p>Almost every time, you will have the following in your Pipfile:</p>
+
+<pre><code>[packages]
+&quot;-e .&quot; = &quot;*&quot;
+</code></pre>
+
+<p>Bonus reading: <a href="https://github.com/pypa/pipenv/issues/209">pipenv#209</a></p>
+
+<h3 id="unittest">Unit Test</h3>
+
+<p>Use <code>pytest</code>, tests folder in project root, <a href="https://pytest.readthedocs.io/en/2.7.3/goodpractises.html">avoid</a> <code>__init__.py</code> files in your tests folder.</p>
+
+<p>This ensures your tests can be run against an installed version of your package, i.e. <code>-e .</code>.</p>
+
+<p>Strive for 100% Test Coverage, <code>pipenv install pytest-cov --dev</code>.</p>
+
+<h3 id="pickoutbestpracticesyoulike">Pick out Best Practices you like</h3>
+
+<p>But not everything is up for discussion, don&#8217;t be a heathen and choose tabs over spaces.</p>
+
+<ul>
+<li><a href="https://gist.github.com/sloria/7001839">BOBP Guide for Python</a></li>
+<li><a href="http://docs.python-guide.org/en/latest/">Hitchhiker&#8217;s Guide to Python</a></li>
+</ul>
+
+<h3 id="thingsyouhavetolearn">Things you have to learn</h3>
+
+<ol>
+<li><a href="https://www.thecodeship.com/patterns/guide-to-python-function-decorators/con">Decorators</a></li>
+<li><a href="http://book.pythontips.com/en/latest/context_managers.html">Context Managers</a></li>
+<li><a href="https://rszalski.github.io/magicmethods/">OOP Magic Methods</a></li>
+<li><a href="http://treyhunner.com/2015/12/python-list-comprehensions-now-in-color/">List Comprehension</a></li>
+<li><a href="https://jeffknupp.com/blog/2013/04/07/improve-your-python-yield-and-generators-explained/">Generators</a></li>
+<li><a href="http://nvie.com/posts/iterators-vs-generators/">Iterables vs. Iterators vs. Generators</a></li>
+</ol>
+          <div class="tags"></div>
+          </div>
+        </article>
+        <footer><span><a href="/">home</a> - <a href="/about.html">about</a> - generated with <a href="https://github.com/hmngwy/jenny">jenny</a></span></footer>
+      </div>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/highlight.min.js"></script>
+      <script>hljs.initHighlightingOnLoad();</script>
+    </body>
+  </html>

@@ -1,0 +1,334 @@
+  <!DOCTYPE html>
+  <html>
+    <head>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+      <title>Paragraphs in the Web - Manila Functional</title>
+      <link href="/fira_code.css" rel="stylesheet">
+      <link href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/styles/obsidian.min.css" rel="stylesheet">
+      <link href="data:image/x-icon;base64,AAABAAEAEBAQAAEABAAoAQAAFgAAACgAAAAQAAAAIAAAAAEABAAAAAAAgAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAANjY2AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAARERERAAAAAAAAAAAAAAAAEQEBEQAAAAAAAAAAAAAAABEREREAAAAAAAAAAAAAAAARAREBAAAAAAAAAAAAAAAAEREBEQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD//wAA//8AAP//AADwDwAA//8AAPKPAAD//wAA8A8AAP//AADyLwAA//8AAPCPAAD//wAA//8AAP//AAD//wAA" rel="icon" type="image/x-icon">
+      <style>
+        * {
+          -webkit-font-smoothing: antialiased;
+          -moz-osx-font-smoothing: grayscale;
+        }
+        body {
+          background-color: rgb(27, 27, 27);
+          color: #c1c1c1;
+          font-size: 16px;
+          padding: 1em;
+          font-family: 'Fira Code', sans-serif;
+          line-height: 1.75em;
+        }
+        @media (min-width: 760px) { body { font-size: 17px } }
+        header { text-transform: uppercase; }
+        header a { text-decoration: none; color: rgb(67, 67, 67);; } header a:hover { color: #268bd2}
+        article { padding: 0; margin: 1.18em 0; max-width: 87ch; line-height: 3.14ch }
+        article a { color: #b58900; display: inline-block; }
+        article img { max-width: 100% }
+        article blockquote { border-left: 1ch solid #313131; padding: 1.5ch 2ch; border-radius: 3px; background-color: #202020; }
+        article blockquote,
+        article pre { margin: 0; }
+        article pre,
+        article code { background-color: #2b2b2b; border-radius: 3px; font-family: 'Fira Code'; padding: 0.4ch; }
+        article pre { word-break: break-all; width: 100%; }
+        article blockquote :first-of-type { margin-top: 0; }
+        article blockquote :last-of-type { margin-bottom: 0; }
+        article hr { border: 0; border-bottom: 3px solid #2d2d2d; }
+        .heading { font-family: 'Fira Code'; margin-bottom: 2ch; }
+        .heading a { text-decoration: none; }
+        .heading .title { max-width: 650px; font-size: inherit; color: #e1e1e1; display: table-cell; text-transform: uppercase; margin: 0 0 1em; font-weight:400; line-height: 2.5ch;  }
+        .heading .title:hover { text-decoration: underline; }
+        .home { display: inline-block; width: 5ch; text-align:right; margin-right: 2ch; }
+        .heading .stamp { color: #676767; display: table-cell; width: 5ch; text-align:right; padding-right: 2ch; }
+        .home { text-decoration: none; margin-bottom: 1.5em; text-align: left;  color: #cb4b16; } .home:hover { color: #dc322f; }
+        .contents > * { margin: 2ch 0; }
+        .contents { display: inline-block; max-width: 80ch; vertical-align: top; width: 100%; }
+        .contents :first-child { margin-top: 0; }
+        h1, h2, h3, h4, h5, h6 { font-size: 1em; font-weight: 500; margin: 2em 0 1em; }
+        h1, h2, h3 { text-transform: uppercase; margin: 3em 0 1em; }
+        .contents h1 { margin-top: 3ch; border-bottom: 2px solid grey;  }
+        .contents h2 { margin-top: 3ch; border-bottom: 1px solid lightgrey;  }
+        .contents h3 { margin-top: 3ch; margin-bottom: 0; padding-bottom: 0; }
+        .contents > h4,
+        .contents > h5,
+        .contents > h6 { margin-bottom: 0; }
+        .contents > h4 + *,
+        .contents > h5 + *,
+        .contents > h6 + * { margin-top: 0; }
+        .contents h5, .contents h6 { font-weight; normal; }
+        .contents h5, .contents h6 { font-style: italic; }
+        ul { padding-left: 1.75em; } ol { padding-left: 2.75em; }
+        .footnotes { padding: 1em 0 0; font-size: .85em; }
+        .footnotes:before { content: 'FOOTNOTES' }
+        .footnotes hr { display: none; }
+        .footnotes ol { padding-left: 2.85em; line-height: 3ch; }
+        .footnote { vertical-align: super; font-size: .85em; text-decoration: none; line-height: 0; }
+        .tags { margin-top: 3em; font-size: .85em; }
+        .tags a { background-color: #202020; display:inline-block;padding: 0 .5em;border-radius: 4px; }
+        .wrap { max-width: 1024px; margin: 0 auto; }
+        figure { margin: 0 }
+        .hljs { background-color: #202020; padding: 2ch; }
+        footer { margin-top: 5ch; } footer a { color: inherit; }
+        footer span { font-size:.85em; color: grey; }
+      </style>
+    </head>
+    <body>
+      <div class="wrap">
+        <header><a href="/">MANILA FUNCTIONAL</a></header>
+        <article>
+        <div class="heading"><a href="/post/paragraphs.html"><span class="stamp">06/22</span><h1 class="title">Paragraphs in the Web</h1></a></div>
+          <div class="contents">
+          <!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+<head>
+	<meta charset="utf-8"/>
+	<meta name="series" content="Web Typography"/>
+</head>
+<body>
+
+
+
+<p>People spend a lot of time looking at paragraphs, here’s how to invest more time in them as a designer.</p>
+
+<p>This is the first installment of the series Web Typography. The series is about typographical choices available with rudimentary CSS, and little reliance on JS. The series tries not to delve too deeply in code, but instead supplies a rough guide on applying available typographic elements in the web. {intro emphasize excerpt}</p>
+
+<h3 id="startingwithparagraphs">Starting with Paragraphs</h3>
+
+<p>Some of these may be obvious or seem like unimportant design decisions, but a well laid out body of text can stand on its own as good design. It is worth investing some time in the finer details of what should be treated as the smallest building block of web design, that is Paragraphs.</p>
+
+<h2 id="spacingandindentation">Spacing and Indentation</h2>
+
+<p>We have two spacing options for paragraphs.</p>
+
+<ol>
+<li>The common and modern choice is to have spaced paragraphs.</li>
+<li>The less popular yet classic choice is having non-spaced paragraphs, while indenting the first line of immediately succeeding paragraphs to indicate their start.</li>
+</ol>
+
+<h3 id="usingspacedparagraphs">Using Spaced Paragraphs</h3>
+
+<pre><code class="markdown">A Fox once saw a Crow fly off with a piece of cheese in its beak
+and settle on a branch of a tree. &quot;That's for me, as I am a Fox,&quot;
+said Master Reynard, and he walked up to the foot of the tree. 
+
+&quot;Good-day, Mistress Crow,&quot; he cried. &quot;How well you are looking
+to-day: how glossy your feathers; how bright your eye. I feel 
+sure your voice must surpass that of other birds, just as your 
+figure does; let me hear but one song from you that I may greet
+you as the Queen of Birds.&quot; 
+</code></pre>
+
+<p>The amount of space depends on your body&#8217;s point size, but a common value is to be somewhere around 100% of a typeface&#8217;s height (read: not <code>line-height</code>). Use your judgement as a guide, the paragraphs should still flow from one to the other fluidly while reading.</p>
+
+<p>Not too much that the paragraphs seem not related or disassociated, and not too tight that you can not distinguish one from the next.</p>
+
+<h3 id="usingnon-spacedparagraphs">Using Non-spaced Paragraphs</h3>
+
+<pre><code class="markdown">A Fox once saw a Crow fly off with a piece of cheese in its beak
+and settle on a branch of a tree. &quot;That's for me, as I am a Fox,&quot;
+said Master Reynard, and he walked up to the foot of the tree. 
+    &quot;Good-day, Mistress Crow,&quot; he cried. &quot;How well you are 
+looking to-day: how glossy your feathers; how bright your eye. I
+feel sure your voice must surpass that of other birds, just as
+your figure does; let me hear but one song from you that I may
+greet you as the Queen of Birds.&quot; 
+</code></pre>
+
+<p>Choosing non-spaced paragraphs means you have to use indentation on the first line. The primary purpose of indentation is for the reader to easily distinguish one paragraph from the next, with most web-fonts at least <code>1em</code> would do. The body of this site uses <code>1.5em</code> for good measure. Depending on the typeface you choose, you will have to manually gauge how much indentation to use.</p>
+
+<p>Given the above premise, you should omit indentation on a paragraph directly under a heading or any non-paragraph element, since it&#8217;s obvious to the reader that is the beginning paragraph. Easily achieved with a <code>p + p</code> selector.</p>
+
+<h2 id="linespacingorleading">Line Spacing or Leading</h2>
+
+<p>Commonly referred to as line height, unfortunately misappropriated in recent years. <em>Leading</em> is the distance between successive lines within a paragraph. The CSS property <code>line-height</code> controls this element, it actually manipulates not the distance between two lines, but instead the height of a line including the text itself. The use may somewhat be the same, but the behavior is entirely different. Thus the confusion regarding the terminology.</p>
+
+<p>Obviously, do not use negative line-height for body text. A bad typeface makes you apply negative spacing to make it visually pleasant. If you continue to use such a typeface you will run into problems later down the line.</p>
+
+<h4 id="pointers:">Pointers:</h4>
+
+<ol>
+<li>Use positive line spacing that guarantees the user does not re-read a line repeatedly in confusion</li>
+<li>Make sure that lines in the middle of a paragraph starting with capitals does not look like the beginning of a separate paragraph</li>
+<li>With most decent web-fonts, a good starting point is to use <code>1.618em</code><a href="#fn:1" id="fnref:1" title="see footnote" class="footnote"><sup>1</sup></a> in CSS <code>line-height</code> and adjust from there. Sometimes as low as <code>1.3em</code> works.</li>
+</ol>
+
+<h2 id="alignment">Alignment</h2>
+
+<p>:::aside
+This is a right aligned aside, to disassociate this margin violator from the main body text.
+:::
+</p>
+
+<p>Never unnecessarily right-align body copy in a left-to-right language, and vice versa with left-align. In margin violators use alignment opposite of the side violated. If you&#8217;re viewing this page in a large screen you will see an aside to the left that is right aligned.</p>
+
+<p>In a two column layout, do not oppositely align neighboring columns if their text belongs to one body. Readers may infer the text as not related, instead apply it when appropriate.</p>
+
+<h2 id="measureorlinelength">Measure or Line Length</h2>
+
+<p>On the Web this is commonly measured in characters-per-line, or CPL. Some would suggest an amount of words-per-line, but this is much harder to gauge because of words' varied length.</p>
+
+<p>Designers have varied opinion here, some suggest the range 50&#8211;60<a href="#fn:2" id="fnref:2" title="see footnote" class="footnote"><sup>2</sup></a>, or the larger 45&#8211;75, and some use a more specific value like 66<a href="#fn:3" id="fnref:3" title="see footnote" class="footnote"><sup>3</sup></a>. Too wide and the user will be susceptible to accidentally re-reading a line. Too narrow and reading will be exhausting due to rapid eye-tracking.</p>
+
+<p>:::aside
+For historical reference, over time typewriter manufacturers started using 72 CPL more commonly for A4 sized paper.
+:::
+</p>
+
+<p>On narrower screens you will have to resort to a lower CPL to avoid having to use too small a point size, and also if you want to disable horizontal scrolling (you should). Do not be afraid to use a minimum of <code>45ch</code> for smaller screens. While viewing well designed sites in mobile, I can sometimes see at the minimum around <code>40-50ch</code>, because of the use-case and the reading medium (touch vertical-only scrolling) this becomes somehow acceptable.</p>
+
+<p>As your breakpoints grow, maximize your CPL as much you can and get closer to your highest CPL sooner rather than later, i.e. have a bias towards your max CPL, sacrificing some margin is acceptable.</p>
+
+<h2 id="justificationandhyphenation">Justification and Hyphenation</h2>
+
+<p>:::aside
+If you plan to use justification, make sure you are using <code>EMs</code> for your point size and <code>CH</code> for your line-width, this way, your CPL does not change when you test out different point sizes.
+:::
+</p>
+
+<p>Good justification works well depending on the typeface used, line length, point size, minimum word spacing, and with proper hyphenation. Note that with justification browsers add space in between words, and sometimes between words and punctuations already separated by space, how each browser decides where to add spaces depends on its design team.</p>
+
+<p>A common problem is too much space between words, albeit visually unpleasant fortunately this is easily identified. Solutions range from increasing the CPL, point size, and as a last resort trying another typeface. You may be averse with the latter solution, and that&#8217;s understandable, but some typefaces work better with justification than others.</p>
+
+<p>You can use <code>word-spacing</code> to define the minimum space between your words, it will allow the browser to compress more words into a line. Do this only if your typeface allows it such that readability doesn&#8217;t suffer.</p>
+
+<p>Do not treat justification like text alignment and dismiss it immediately when it doesn&#8217;t work, at least in the web it is a different element from alignment partly due to automated and opinionated spacing algorithms. With decent web-fonts, there will usually be a CPL and point size sweet-spot for justification.</p>
+
+<p>For smaller screens, do not be hesitant to disable justification, the lower CPL will definitely introduce uninviting space between words. The way justification works on the web is a good reason to treat it as a progressive enhancement. In the end, it is more of an aesthetic choice than a readability-choice. Readability trumps consistency every time.</p>
+
+<h4 id="pointers:">Pointers:</h4>
+
+<ol>
+<li>Look out for lines that have too much space in between words, i.e. words in a sentence feel disconnected, lacks fluid flow, and</li>
+<li>Lines that have too little space, rare, but it may happen</li>
+<li>Do not feel bad about disabling justification on smaller screens, readability trumps consistency</li>
+<li>Longer lines usually fixes issues because of increased word resolution, or words per line, but keep to recommended maximum CPL</li>
+</ol>
+
+<h4 id="jshyphenation">JS Hyphenation</h4>
+
+<p>Hyphenation usually solves excessive word spacing when justified. But hyphenation support is absent in Chrome, and designed weakly in Safari and other browsers. The reason being it is an expensive functionality, and requires at least more than one pass of calculation during rendering. In which case performance trumps preciseness.</p>
+
+<p>Until browsers employ good hyphenation algorithms, one should enable available CSS hyphenation and employ a JS hyphenation library as a progressive enhancement. My best recommendation is to use <a href="https://github.com/mnater/hyphenator">Hyphenator</a>.</p>
+
+<p>Hyphenation on successive lines is a common issue across browsers and JS-based solutions, it is visually unpleasant, but I have yet to encounter a library that only hyphenates one line for every variable number of lines I define. At the time of writing Hyphenator does not support this.</p>
+
+<h2 id="hangingpunctuation">Hanging Punctuation</h2>
+
+<p>There is a proposed CSS <code>hanging-punctuation</code> property that would come in handy if you have to support user input, like in Lilii, the platform this post is served from. At the time of writing there is no browser support for this property, current working solutions are made with JavaScript and are not without drawbacks.</p>
+
+<h4 id="withouthangingpunctuation">Without Hanging Punctuation</h4>
+
+<pre><code class="markdown">&quot;Good-day, Mistress Crow,&quot; he cried. &quot;How well you are
+looking to-day: how glossy your feathers; how bright your eye.
+I feel sure your voice must surpass that of other birds, just
+as your figure does; let me hear but one song from you that I
+may greet you as the Queen of Birds.&quot; 
+ 
+The Crow lifted up her head and began to caw her best, but
+the moment she opened her mouth the piece of cheese fell to the
+ground, only to be snapped up by Master Fox.
+</code></pre>
+
+<h4 id="withhangingpunctuation">With Hanging Punctuation</h4>
+
+<pre><code class="markdown">&quot;Good-day, Mistress Crow,&quot; he cried. &quot;How well you are
+ looking to-day: how glossy your feathers; how bright your eye.
+ I feel sure your voice must surpass that of other birds, just
+ as your figure does; let me hear but one song from you that I
+ may greet you as the Queen of Birds.&quot; 
+ 
+ The Crow lifted up her head and began to caw her best, but
+ the moment she opened her mouth the piece of cheese fell to the
+ ground, only to be snapped up by Master Fox.
+</code></pre>
+
+<p>Currently, there are two known methods of employing hanging punctuation. Both involve <em>wrapping</em> identified punctuations with an inline tag, and then applying CSS rules to make it fall outside of the paragraph block, which are either:</p>
+
+<ol>
+<li>Setting its position to <code>absolute</code> and setting <code>right: 0</code>, while making sure the parent has <code>relative</code> positioning</li>
+<li>Or giving it a negative <code>text-indent</code> or <code>margin</code> of the its width in <code>em</code></li>
+</ol>
+
+<h3 id="negativetext-indentmethod">Negative Text-Indent method</h3>
+
+<p>:::aside
+The best way to go about this is to have the values in <code>EM</code> so that you can easily scale your point size without having to update the measurements.
+:::
+</p>
+
+<p><a href="http://webdesign.tutsplus.com/articles/getting-the-hang-of-hanging-punctuation--cms-19890">This method requires you to measure punctuation widths</a>, which are then used as negative <code>text-indent</code> on the wrapped punctuations. This is a tedious way to do it but will support hanging punctuations in indented paragraphs, being the adjustment relative to the text instead of the paragraph block.</p>
+
+<p>One drawback is that you will have to make measurements for each typeface with which hanging punctuation will be applied. Another is that this will not support right aligned text efficiently. You will have to add another set of classes for punctuations in the right aligned text, using the same measurements but on a different property. This doubles the amount of CSS required per each typeface.</p>
+
+<h3 id="absolutepositioningmethod">Absolute Positioning method</h3>
+
+<p><a href="http://codepen.io/Lane/pen/kufHo/">This is a more efficient method</a>, as the punctuation will drop outside of the paragraph block without specific measurements, and thus will work with variable typefaces.</p>
+
+<p>The drawback is immediately obvious, you cannot use non-spaced paragraphs with this method. Since the adjustment is relative to the block and not the text, the punctuations will still fall outside the block of indented paragraphs.</p>
+
+<h4 id="indentedparagraphdrawback">Indented Paragraph Drawback</h4>
+
+<pre><code class="markdown"> A Fox once saw a Crow fly off with a piece of cheese in its beak 
+ and settle on a branch of a tree. &quot;That's for me, as I am a Fox,&quot;
+ said Master Reynard, and he walked up to the foot of the tree. 
+&quot;    Good-day, Mistress Crow,&quot; he cried. &quot;How well you are
+ looking to-day: how glossy your feathers; how bright your eye.
+ I feel sure your voice must surpass that of other birds, just
+ as your figure does; let me hear but one song from you that I
+ may greet you as the Queen of Birds.&quot; 
+</code></pre>
+
+<h3 id="rightalignedtextsupport">Right Aligned Text Support</h3>
+
+<p>When text is right aligned for left-to-right languages, punctuations at the <em>end</em> of a paragraph are hanged instead of ones at the <em>start</em>.</p>
+
+<p>The <strong>absolute positioning method</strong> linked above partially supports this, but it doesn&#8217;t do so automatically. You will have to mark up right aligned paragraphs with a class, that class then activates hanging <em>end</em> punctuations identified during wrapping, and disables the effect on <em>start</em> punctuations.</p>
+
+<p>The <strong>negative text-indent method</strong> however will need some additional work. Like the absolute positioning method, you need to classify <em>end</em> versus <em>start</em> punctuations during wrapping, then mark up right aligned paragraphs with a class. Instead of applying negative <code>text-indent</code> for right aligned paragraphs, you use a negative <code>margin-right</code> on <em>end</em> punctuations, while disabling the effect on <em>start</em> punctuations.</p>
+
+<p>The proposed CSS property should supposedly detect this and apply the proper hanging alignment without any additional mark up.</p>
+
+<hr />
+
+<p>This concludes the entry for Paragraphs, part of the series Web Typography. The series will cover more topics in the future, at the end of each installment, I will include an up-to-date list of links and planned topics in the series.</p>
+
+<ol>
+<li><a href="https://lilii.co/aardvark/paragraphs">Paragraphs</a></li>
+<li>Headings</li>
+<li>Lists</li>
+<li>Block quotes</li>
+<li>Inline elements: Links, Footnotes, etc.</li>
+<li>Asides</li>
+</ol>
+
+<div class="footnotes">
+<hr />
+<ol>
+
+<li id="fn:1">
+<p>A List Apart: More Meaningful Typography — <a href="http://alistapart.com/article/more-meaningful-typography">http://alistapart.com/article/more&#8211;meaningful&#8211;typography</a> <a href="#fnref:1" title="return to body" class="reversefootnote">&#160;&#8617;</a></p>
+</li>
+
+<li id="fn:2">
+<p>Readability: the Optimal Line Length — <a href="http://baymard.com/blog/line-length-readability">http://baymard.com/blog/line&#8211;length&#8211;readability</a> <a href="#fnref:2" title="return to body" class="reversefootnote">&#160;&#8617;</a></p>
+</li>
+
+<li id="fn:3">
+<p>Choose a comfortable measure — <a href="http://webtypography.net/2.1.2">http://webtypography.net/2.1.2</a> <a href="#fnref:3" title="return to body" class="reversefootnote">&#160;&#8617;</a></p>
+</li>
+
+</ol>
+</div>
+
+</body>
+</html>
+          <div class="tags"></div>
+          </div>
+        </article>
+        <footer><span><a href="/">home</a> - <a href="/about.html">about</a> - generated with <a href="https://github.com/hmngwy/jenny">jenny</a></span></footer>
+      </div>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/highlight.min.js"></script>
+      <script>hljs.initHighlightingOnLoad();</script>
+    </body>
+  </html>

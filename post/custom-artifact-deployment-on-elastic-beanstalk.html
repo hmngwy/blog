@@ -1,0 +1,137 @@
+  <!DOCTYPE html>
+  <html>
+    <head>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+      <title>Custom Artifact Deployment on Elastic Beanstalk - Manila Functional</title>
+      <link href="/fira_code.css" rel="stylesheet">
+      <link href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/styles/obsidian.min.css" rel="stylesheet">
+      <link href="data:image/x-icon;base64,AAABAAEAEBAQAAEABAAoAQAAFgAAACgAAAAQAAAAIAAAAAEABAAAAAAAgAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAANjY2AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAARERERAAAAAAAAAAAAAAAAEQEBEQAAAAAAAAAAAAAAABEREREAAAAAAAAAAAAAAAARAREBAAAAAAAAAAAAAAAAEREBEQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD//wAA//8AAP//AADwDwAA//8AAPKPAAD//wAA8A8AAP//AADyLwAA//8AAPCPAAD//wAA//8AAP//AAD//wAA" rel="icon" type="image/x-icon">
+      <style>
+        * {
+          -webkit-font-smoothing: antialiased;
+          -moz-osx-font-smoothing: grayscale;
+        }
+        body {
+          background-color: rgb(27, 27, 27);
+          color: #c1c1c1;
+          font-size: 16px;
+          padding: 1em;
+          font-family: 'Fira Code', sans-serif;
+          line-height: 1.75em;
+        }
+        @media (min-width: 760px) { body { font-size: 17px } }
+        header { text-transform: uppercase; }
+        header a { text-decoration: none; color: rgb(67, 67, 67);; } header a:hover { color: #268bd2}
+        article { padding: 0; margin: 1.18em 0; max-width: 87ch; line-height: 3.14ch }
+        article a { color: #b58900; display: inline-block; }
+        article img { max-width: 100% }
+        article blockquote { border-left: 1ch solid #313131; padding: 1.5ch 2ch; border-radius: 3px; background-color: #202020; }
+        article blockquote,
+        article pre { margin: 0; }
+        article pre,
+        article code { background-color: #2b2b2b; border-radius: 3px; font-family: 'Fira Code'; padding: 0.4ch; }
+        article pre { word-break: break-all; width: 100%; }
+        article blockquote :first-of-type { margin-top: 0; }
+        article blockquote :last-of-type { margin-bottom: 0; }
+        article hr { border: 0; border-bottom: 3px solid #2d2d2d; }
+        .heading { font-family: 'Fira Code'; margin-bottom: 2ch; }
+        .heading a { text-decoration: none; }
+        .heading .title { max-width: 650px; font-size: inherit; color: #e1e1e1; display: table-cell; text-transform: uppercase; margin: 0 0 1em; font-weight:400; line-height: 2.5ch;  }
+        .heading .title:hover { text-decoration: underline; }
+        .home { display: inline-block; width: 5ch; text-align:right; margin-right: 2ch; }
+        .heading .stamp { color: #676767; display: table-cell; width: 5ch; text-align:right; padding-right: 2ch; }
+        .home { text-decoration: none; margin-bottom: 1.5em; text-align: left;  color: #cb4b16; } .home:hover { color: #dc322f; }
+        .contents > * { margin: 2ch 0; }
+        .contents { display: inline-block; max-width: 80ch; vertical-align: top; width: 100%; }
+        .contents :first-child { margin-top: 0; }
+        h1, h2, h3, h4, h5, h6 { font-size: 1em; font-weight: 500; margin: 2em 0 1em; }
+        h1, h2, h3 { text-transform: uppercase; margin: 3em 0 1em; }
+        .contents h1 { margin-top: 3ch; border-bottom: 2px solid grey;  }
+        .contents h2 { margin-top: 3ch; border-bottom: 1px solid lightgrey;  }
+        .contents h3 { margin-top: 3ch; margin-bottom: 0; padding-bottom: 0; }
+        .contents > h4,
+        .contents > h5,
+        .contents > h6 { margin-bottom: 0; }
+        .contents > h4 + *,
+        .contents > h5 + *,
+        .contents > h6 + * { margin-top: 0; }
+        .contents h5, .contents h6 { font-weight; normal; }
+        .contents h5, .contents h6 { font-style: italic; }
+        ul { padding-left: 1.75em; } ol { padding-left: 2.75em; }
+        .footnotes { padding: 1em 0 0; font-size: .85em; }
+        .footnotes:before { content: 'FOOTNOTES' }
+        .footnotes hr { display: none; }
+        .footnotes ol { padding-left: 2.85em; line-height: 3ch; }
+        .footnote { vertical-align: super; font-size: .85em; text-decoration: none; line-height: 0; }
+        .tags { margin-top: 3em; font-size: .85em; }
+        .tags a { background-color: #202020; display:inline-block;padding: 0 .5em;border-radius: 4px; }
+        .wrap { max-width: 1024px; margin: 0 auto; }
+        figure { margin: 0 }
+        .hljs { background-color: #202020; padding: 2ch; }
+        footer { margin-top: 5ch; } footer a { color: inherit; }
+        footer span { font-size:.85em; color: grey; }
+      </style>
+    </head>
+    <body>
+      <div class="wrap">
+        <header><a href="/">MANILA FUNCTIONAL</a></header>
+        <article>
+        <div class="heading"><a href="/post/custom-artifact-deployment-on-elastic-beanstalk.html"><span class="stamp">08/29</span><h1 class="title">Custom Artifact Deployment on Elastic Beanstalk</h1></a></div>
+          <div class="contents">
+          <!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+<head>
+	<meta charset="utf-8"/>
+	<meta name="colophon" content="location: Sta. Rosa PH"/>
+</head>
+<body>
+
+<p>Code {label}</p>
+
+
+
+<p>Deploying VCS ignored code to AWS Elastic Beanstalk. {lede}</p>
+
+<p>Lilii, the site I run this blog from, uses a build script for deployment, the build script does basic stuff like compiling assets and updating references in the templates. The updated templates are housed in a folder that is read from when the app runs in production. This build directory doesn&#8217;t belong in Git so I have it in my <code>.gitignore</code>. The problem with this is that when using Git with EB CLI, the deploy subcommand uses <code>git archive</code>  to prepare the artifact it uploads to S3 for deployment. And so ignored files and folders are not included in this archive, thus my built templates are not included in the deployed code. {excerpt intro emphasize}</p>
+
+<p>Fortunately there&#8217;s a way to tell the CLI to collect the artifact from another location. In your <code>.elasticbeanstalk/config.yml</code> file you will have to add:</p>
+
+<pre><code class="yml">deploy:
+  artifact: &quot;path/to/archive.zip&quot;
+</code></pre>
+
+<p>With this we can generate our own artifact/zip file at the tail of our build scripts and place it in the specified path in our config.</p>
+
+<h5 id="threethingsthatareundocumentedherealign-centerletter-space-2">Three things that are undocumented here {align-center letter-space-2}</h5>
+
+<p>First, the <em>path does not need to be absolute (1)</em>, documentation and an AWS employee in the forums indicated the paths should be absolute. I found that relative paths work. {dropcap}</p>
+
+<p>You will still have to <em>commit before deploying (2)</em>, this is because even though you named your artifact/zip file, EB CLI will still use the first few letters of <code>git rev-parse --short HEAD</code> to rename it. If you don&#8217;t commit, EB CLI will see the current commit HEAD matches the last deploy, it will not upload your zip file, and instead will use the last upload straight from S3 to re-deploy.</p>
+
+<p>Lastly, unfortunately this features is not verbose, <em>you will not be notified it is using your artifact (3)</em>, the fact that it uses the commit hash to rename your artifact makes it seem like <code>git archive</code> is still in use. The only way to find out if your artifact is used in deployment is to use <code>--debug</code> and watch out for mentions of your artifact path, like:</p>
+
+<pre><code class="json">{
+  'Body': &lt;open file 'path/to/artifact.zip', mode 'rb' at 0x000FFF000&gt;, 
+  'Bucket': 'elasticbeanstalk-us-east-0-0000000000',
+  'Key': 'projectroot/1a2b.zip'
+}
+</code></pre>
+
+<hr />
+
+<h6 id="update16september2015.">Update 16 September 2015.</h6>
+
+<p>Since I initially published this article, I have started using <code>grunt-eb-deploy</code>, because my deployment artifact became a bit more complicated after I added <code>grunt-usemin</code> for optimization, and LESS support for CSS. This module can take care of compressing a build folder after all your grunt tasks, it uses the AWS SDK directly and so with it a commit is not necessary before deploying.</p>
+
+</body>
+</html>
+          <div class="tags"></div>
+          </div>
+        </article>
+        <footer><span><a href="/">home</a> - <a href="/about.html">about</a> - generated with <a href="https://github.com/hmngwy/jenny">jenny</a></span></footer>
+      </div>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/highlight.min.js"></script>
+      <script>hljs.initHighlightingOnLoad();</script>
+    </body>
+  </html>

@@ -1,0 +1,56 @@
+==================================================================
+https://keybase.io/patambrosio
+--------------------------------------------------------------------
+
+I hereby claim:
+
+  * I am an admin of http://manilafunctional.com
+  * I am patambrosio (https://keybase.io/patambrosio) on keybase.
+  * I have a public key ASDRqG6uYaWgsm3NvYC_I1_qKtItxkGqFMgzU_b2bhqx7Ao
+
+To do so, I am signing this object:
+
+{
+  "body": {
+    "key": {
+      "eldest_kid": "0120a06f6ddad6950b43845878d2498b459646196b77e87b8081837677095063a7fd0a",
+      "host": "keybase.io",
+      "kid": "0120d1a86eae61a5a0b26dcdbd80bf235fea2ad22dc641aa14c83353f6f66e1ab1ec0a",
+      "uid": "f0cf357a6fb5f5431ca2fcfae8031719",
+      "username": "patambrosio"
+    },
+    "merkle_root": {
+      "ctime": 1557459824,
+      "hash": "10685f459ac0d0d3246f12d5dc8ead43d944081aed7a00a945bf72b60e230b388cb27b08acd59049d6ed0f577967bb4eb70db4b62225bd89e354a7e5f8f92978",
+      "hash_meta": "12dc0976e3053b22b59529e671e5b8d5d1e3891987c778ef4f7d813b3656a744",
+      "seqno": 5340209
+    },
+    "service": {
+      "entropy": "JqTw8C6J2w3kexbNHgATgheA",
+      "hostname": "manilafunctional.com",
+      "protocol": "http:"
+    },
+    "type": "web_service_binding",
+    "version": 2
+  },
+  "client": {
+    "name": "keybase.io go client",
+    "version": "3.2.2"
+  },
+  "ctime": 1557459833,
+  "expire_in": 504576000,
+  "prev": "c8aa10650503af8c14ed1630093c4e69f26e5b787968a664592151f8e37431a0",
+  "seqno": 8,
+  "tag": "signature"
+}
+
+which yields the signature:
+
+hKRib2R5hqhkZXRhY2hlZMOpaGFzaF90eXBlCqNrZXnEIwEg0ahurmGloLJtzb2AvyNf6irSLcZBqhTIM1P29m4asewKp3BheWxvYWTESpcCCMQgyKoQZQUDr4wU7RYwCTxOafJuW3h5aKZkWSFR+ON0MaDEIG4w3FaHLf2HlIbtUtr+mge/Ki5BCZwZFluNjVnYt7EgAgHCo3NpZ8RAM1wDhL+l4PH8NMSwUKxNmgwJBepmVTInyfoZa5pVtQ2L+tx5SUN0xwcZTuN+HPxzpzk0qgUoZr6G910MJ9P8AahzaWdfdHlwZSCkaGFzaIKkdHlwZQildmFsdWXEIFoKlyaqg3hPQfy8Vap1tPNoyE18NoujLYPsUIvTfEobo3RhZ80CAqd2ZXJzaW9uAQ==
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/patambrosio
+
+==================================================================

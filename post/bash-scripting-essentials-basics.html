@@ -1,0 +1,207 @@
+  <!DOCTYPE html>
+  <html>
+    <head>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+      <title>Bash Scripting Essentials - Manila Functional</title>
+      <link href="/fira_code.css" rel="stylesheet">
+      <link href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/styles/obsidian.min.css" rel="stylesheet">
+      <link href="data:image/x-icon;base64,AAABAAEAEBAQAAEABAAoAQAAFgAAACgAAAAQAAAAIAAAAAEABAAAAAAAgAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAANjY2AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAARERERAAAAAAAAAAAAAAAAEQEBEQAAAAAAAAAAAAAAABEREREAAAAAAAAAAAAAAAARAREBAAAAAAAAAAAAAAAAEREBEQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD//wAA//8AAP//AADwDwAA//8AAPKPAAD//wAA8A8AAP//AADyLwAA//8AAPCPAAD//wAA//8AAP//AAD//wAA" rel="icon" type="image/x-icon">
+      <style>
+        * {
+          -webkit-font-smoothing: antialiased;
+          -moz-osx-font-smoothing: grayscale;
+        }
+        body {
+          background-color: rgb(27, 27, 27);
+          color: #c1c1c1;
+          font-size: 16px;
+          padding: 1em;
+          font-family: 'Fira Code', sans-serif;
+          line-height: 1.75em;
+        }
+        @media (min-width: 760px) { body { font-size: 17px } }
+        header { text-transform: uppercase; }
+        header a { text-decoration: none; color: rgb(67, 67, 67);; } header a:hover { color: #268bd2}
+        article { padding: 0; margin: 1.18em 0; max-width: 87ch; line-height: 3.14ch }
+        article a { color: #b58900; display: inline-block; }
+        article img { max-width: 100% }
+        article blockquote { border-left: 1ch solid #313131; padding: 1.5ch 2ch; border-radius: 3px; background-color: #202020; }
+        article blockquote,
+        article pre { margin: 0; }
+        article pre,
+        article code { background-color: #2b2b2b; border-radius: 3px; font-family: 'Fira Code'; padding: 0.4ch; }
+        article pre { word-break: break-all; width: 100%; }
+        article blockquote :first-of-type { margin-top: 0; }
+        article blockquote :last-of-type { margin-bottom: 0; }
+        article hr { border: 0; border-bottom: 3px solid #2d2d2d; }
+        .heading { font-family: 'Fira Code'; margin-bottom: 2ch; }
+        .heading a { text-decoration: none; }
+        .heading .title { max-width: 650px; font-size: inherit; color: #e1e1e1; display: table-cell; text-transform: uppercase; margin: 0 0 1em; font-weight:400; line-height: 2.5ch;  }
+        .heading .title:hover { text-decoration: underline; }
+        .home { display: inline-block; width: 5ch; text-align:right; margin-right: 2ch; }
+        .heading .stamp { color: #676767; display: table-cell; width: 5ch; text-align:right; padding-right: 2ch; }
+        .home { text-decoration: none; margin-bottom: 1.5em; text-align: left;  color: #cb4b16; } .home:hover { color: #dc322f; }
+        .contents > * { margin: 2ch 0; }
+        .contents { display: inline-block; max-width: 80ch; vertical-align: top; width: 100%; }
+        .contents :first-child { margin-top: 0; }
+        h1, h2, h3, h4, h5, h6 { font-size: 1em; font-weight: 500; margin: 2em 0 1em; }
+        h1, h2, h3 { text-transform: uppercase; margin: 3em 0 1em; }
+        .contents h1 { margin-top: 3ch; border-bottom: 2px solid grey;  }
+        .contents h2 { margin-top: 3ch; border-bottom: 1px solid lightgrey;  }
+        .contents h3 { margin-top: 3ch; margin-bottom: 0; padding-bottom: 0; }
+        .contents > h4,
+        .contents > h5,
+        .contents > h6 { margin-bottom: 0; }
+        .contents > h4 + *,
+        .contents > h5 + *,
+        .contents > h6 + * { margin-top: 0; }
+        .contents h5, .contents h6 { font-weight; normal; }
+        .contents h5, .contents h6 { font-style: italic; }
+        ul { padding-left: 1.75em; } ol { padding-left: 2.75em; }
+        .footnotes { padding: 1em 0 0; font-size: .85em; }
+        .footnotes:before { content: 'FOOTNOTES' }
+        .footnotes hr { display: none; }
+        .footnotes ol { padding-left: 2.85em; line-height: 3ch; }
+        .footnote { vertical-align: super; font-size: .85em; text-decoration: none; line-height: 0; }
+        .tags { margin-top: 3em; font-size: .85em; }
+        .tags a { background-color: #202020; display:inline-block;padding: 0 .5em;border-radius: 4px; }
+        .wrap { max-width: 1024px; margin: 0 auto; }
+        figure { margin: 0 }
+        .hljs { background-color: #202020; padding: 2ch; }
+        footer { margin-top: 5ch; } footer a { color: inherit; }
+        footer span { font-size:.85em; color: grey; }
+      </style>
+    </head>
+    <body>
+      <div class="wrap">
+        <header><a href="/">MANILA FUNCTIONAL</a></header>
+        <article>
+        <div class="heading"><a href="/post/bash-scripting-essentials-basics.html"><span class="stamp">07/25</span><h1 class="title">Bash Scripting Essentials</h1></a></div>
+          <div class="contents">
+          
+
+<h3 id="exitoncommandfailure">Exit on Command Failure</h3>
+
+<p>Without explicit configuration your script will continue to run even after it encounters an error, by setting this command your script will exit as soon as it encounters a failure.</p>
+
+<pre><code>set -e
+</code></pre>
+
+<p>However I would recommend that you handle failed commands in your script instead to make it more robust.</p>
+
+<h3 id="respondingtocommandfailure">Responding to Command Failure</h3>
+
+<p>You can check commands whether they were successful or not in if else statements by checking the exit status code with <code>$?</code> then respond accordingly. <code>$?</code> will always contain the last exit status code.</p>
+
+<pre><code>mktemp
+if [ $? -eq 0 ]; then
+  echo &quot;temp file created&quot;
+else
+  echo &quot;temp file creation failed&quot;
+fi
+</code></pre>
+
+<p>Similarly you can use commands directly in the if statements to test whether they succeeded.</p>
+
+<pre><code>if grep nope /dev/null; then
+  echo &quot;found it&quot;
+else
+  echo &quot;not there&quot;
+fi
+</code></pre>
+
+<h3 id="modularizationwithfunctions">Modularization with Functions</h3>
+
+<p>Bash functions behave like bash scripts, it can receive arguments, and return exit status codes.</p>
+
+<pre><code>function my_method {  
+  echo $@
+  exit 0
+}
+MYVAR=$(my_method &quot;hello&quot;)
+echo $MYVAR
+</code></pre>
+
+<h3 id="exitstatuscode">Exit Status Code</h3>
+
+<p>Your bash script can report whether it successfully executed its goal, any status code other than 0 means it has failed. This would be handy if a consumer needs to react depending on the execution’s result, like a CI.</p>
+
+<pre><code>exit 0
+</code></pre>
+
+<h3 id="backgroundservices">Background Services</h3>
+
+<p>You can put a service in the background if it&#8217;s needed by your script to fulfill its goal.</p>
+
+<pre><code>python -m http.server 8080 &amp;
+</code></pre>
+
+<p>You can kill it later as part of your cleanup/teardown step using <code>lsof</code>.</p>
+
+<pre><code>kill -9 $(lsof -i :8080)
+</code></pre>
+
+<p><code>lsof</code> finds the pid of the process, which <code>kill</code> then terminates.</p>
+
+<h3 id="redirectingoutput">Redirecting Output</h3>
+
+<p>A background service might be noisy, and that usually isn&#8217;t ideal. You can hush it by redirecting its output to a file or /dev/null.</p>
+
+<pre><code>python -m http.server 8080 &gt; /dev/null &amp;
+</code></pre>
+
+<p>This would redirect stdout to /dev/null, you may still see errors if they are printed to stderr. To hush that as well you may use:</p>
+
+<pre><code>python -m http.server 8080 &gt; /dev/null 2&gt;&amp;1 &amp;
+</code></pre>
+
+<h4 id="thebriefexplanationhereisthat:">The brief explanation here is that:</h4>
+
+<p><code>2&gt;&amp;1</code> means you are redirecting <code>stderr (2) into stdout (1)</code>, and since you are sending stdout to /dev/null, you are effectively doing the below:</p>
+
+<pre><code>stderr &gt; stdout &gt; /dev/null
+</code></pre>
+
+<h3 id="shortclioptions">Short CLI Options</h3>
+
+<p><code>getopts</code> may not be the best CLI options parser, but it&#8217;s what everyone has, from macOS to Linux based machines.</p>
+
+<p>The first thing to learn is defining options, <code>getopts</code> accepts a string to define the parameters it will parse. The basic rules are:</p>
+
+<ul>
+<li><code>h</code> will check for the presence of <code>-h</code> in your command options</li>
+<li><code>h:</code> will check for the presence <code>-h</code> and a <strong>parameter</strong></li>
+</ul>
+
+<pre><code>#!/usr/bin/env bash
+while getopts &quot;h:ij&quot; arg; do
+  case $arg in
+    h) 
+      echo &quot;h is ${OPTARG}&quot;
+      ;;
+    i) 
+      echo &quot;p is present&quot;
+      ;;
+    j) 
+      echo &quot;p is present&quot;
+      ;;
+  esac
+done
+</code></pre>
+
+<p>The above setup will expect an option <code>-h</code> with a parameter, and <code>-p</code> and <code>-j</code> without parameters. <code>${OPTARG}</code> will always contain the parameter for the current option in the iteration.</p>
+
+<p>This bash script can be executed with the following options <code>./script.sh -h hello -i -j</code>. There is more to <code>getopts</code> aside from what I covered here, I&#8217;ll leave it to you to learn the rest.</p>
+
+<p>This should be enough to get you started with a basic yet robust shell script. For additional reading, I recommend <a href="https://zwischenzugs.com/2018/01/06/ten-things-i-wish-id-known-about-bash/">Ten Things I Wish I’d Known About bash</a> by zwischenzugs.</p>
+          <div class="tags"><a href="/tag/bash">bash</a>
+<a href="/tag/linux">linux</a></div>
+          </div>
+        </article>
+        <footer><span><a href="/">home</a> - <a href="/about.html">about</a> - generated with <a href="https://github.com/hmngwy/jenny">jenny</a></span></footer>
+      </div>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/highlight.min.js"></script>
+      <script>hljs.initHighlightingOnLoad();</script>
+    </body>
+  </html>

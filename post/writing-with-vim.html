@@ -1,0 +1,338 @@
+  <!DOCTYPE html>
+  <html>
+    <head>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+      <title>Writing with Vim - Manila Functional</title>
+      <link href="/fira_code.css" rel="stylesheet">
+      <link href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/styles/obsidian.min.css" rel="stylesheet">
+      <link href="data:image/x-icon;base64,AAABAAEAEBAQAAEABAAoAQAAFgAAACgAAAAQAAAAIAAAAAEABAAAAAAAgAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAANjY2AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAARERERAAAAAAAAAAAAAAAAEQEBEQAAAAAAAAAAAAAAABEREREAAAAAAAAAAAAAAAARAREBAAAAAAAAAAAAAAAAEREBEQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD//wAA//8AAP//AADwDwAA//8AAPKPAAD//wAA8A8AAP//AADyLwAA//8AAPCPAAD//wAA//8AAP//AAD//wAA" rel="icon" type="image/x-icon">
+      <style>
+        * {
+          -webkit-font-smoothing: antialiased;
+          -moz-osx-font-smoothing: grayscale;
+        }
+        body {
+          background-color: rgb(27, 27, 27);
+          color: #c1c1c1;
+          font-size: 16px;
+          padding: 1em;
+          font-family: 'Fira Code', sans-serif;
+          line-height: 1.75em;
+        }
+        @media (min-width: 760px) { body { font-size: 17px } }
+        header { text-transform: uppercase; }
+        header a { text-decoration: none; color: rgb(67, 67, 67);; } header a:hover { color: #268bd2}
+        article { padding: 0; margin: 1.18em 0; max-width: 87ch; line-height: 3.14ch }
+        article a { color: #b58900; display: inline-block; }
+        article img { max-width: 100% }
+        article blockquote { border-left: 1ch solid #313131; padding: 1.5ch 2ch; border-radius: 3px; background-color: #202020; }
+        article blockquote,
+        article pre { margin: 0; }
+        article pre,
+        article code { background-color: #2b2b2b; border-radius: 3px; font-family: 'Fira Code'; padding: 0.4ch; }
+        article pre { word-break: break-all; width: 100%; }
+        article blockquote :first-of-type { margin-top: 0; }
+        article blockquote :last-of-type { margin-bottom: 0; }
+        article hr { border: 0; border-bottom: 3px solid #2d2d2d; }
+        .heading { font-family: 'Fira Code'; margin-bottom: 2ch; }
+        .heading a { text-decoration: none; }
+        .heading .title { max-width: 650px; font-size: inherit; color: #e1e1e1; display: table-cell; text-transform: uppercase; margin: 0 0 1em; font-weight:400; line-height: 2.5ch;  }
+        .heading .title:hover { text-decoration: underline; }
+        .home { display: inline-block; width: 5ch; text-align:right; margin-right: 2ch; }
+        .heading .stamp { color: #676767; display: table-cell; width: 5ch; text-align:right; padding-right: 2ch; }
+        .home { text-decoration: none; margin-bottom: 1.5em; text-align: left;  color: #cb4b16; } .home:hover { color: #dc322f; }
+        .contents > * { margin: 2ch 0; }
+        .contents { display: inline-block; max-width: 80ch; vertical-align: top; width: 100%; }
+        .contents :first-child { margin-top: 0; }
+        h1, h2, h3, h4, h5, h6 { font-size: 1em; font-weight: 500; margin: 2em 0 1em; }
+        h1, h2, h3 { text-transform: uppercase; margin: 3em 0 1em; }
+        .contents h1 { margin-top: 3ch; border-bottom: 2px solid grey;  }
+        .contents h2 { margin-top: 3ch; border-bottom: 1px solid lightgrey;  }
+        .contents h3 { margin-top: 3ch; margin-bottom: 0; padding-bottom: 0; }
+        .contents > h4,
+        .contents > h5,
+        .contents > h6 { margin-bottom: 0; }
+        .contents > h4 + *,
+        .contents > h5 + *,
+        .contents > h6 + * { margin-top: 0; }
+        .contents h5, .contents h6 { font-weight; normal; }
+        .contents h5, .contents h6 { font-style: italic; }
+        ul { padding-left: 1.75em; } ol { padding-left: 2.75em; }
+        .footnotes { padding: 1em 0 0; font-size: .85em; }
+        .footnotes:before { content: 'FOOTNOTES' }
+        .footnotes hr { display: none; }
+        .footnotes ol { padding-left: 2.85em; line-height: 3ch; }
+        .footnote { vertical-align: super; font-size: .85em; text-decoration: none; line-height: 0; }
+        .tags { margin-top: 3em; font-size: .85em; }
+        .tags a { background-color: #202020; display:inline-block;padding: 0 .5em;border-radius: 4px; }
+        .wrap { max-width: 1024px; margin: 0 auto; }
+        figure { margin: 0 }
+        .hljs { background-color: #202020; padding: 2ch; }
+        footer { margin-top: 5ch; } footer a { color: inherit; }
+        footer span { font-size:.85em; color: grey; }
+      </style>
+    </head>
+    <body>
+      <div class="wrap">
+        <header><a href="/">MANILA FUNCTIONAL</a></header>
+        <article>
+        <div class="heading"><a href="/post/writing-with-vim.html"><span class="stamp">04/02</span><h1 class="title">Writing with Vim</h1></a></div>
+          <div class="contents">
+          
+
+<h3 id="thereisanabundanceofreliablewritingsoftwareforosxpersonallyilikeiawriterbothinmymobiledevicesandinmylaptopwriteroomisaclosecontenderforitscustomizability.asaprogrammerforthebetterpartofthedayiamonaterminalcodinginvim.">There is an abundance of reliable writing software for OSX, personally I like iA Writer both in my mobile devices and in my laptop, WriteRoom is a close contender for its customizability. As a programmer, for the better part of the day I am on a terminal coding in Vim.</h3>
+
+<p>I cannot count the times where I’ve written <code>:w</code> in iA writer in an attempt to save a document (primitive, one should map it to a function key). Writing files in a Vim-specific workflow can become a force of habit because of the command structure&#8217;s design, thus I integrated Vim into my blogging workflow to fully utilize coding habits that I can carry over.</p>
+
+<!--more-->
+
+<p>For the sake of brevity, I will skip over the smaller details in setting up Vim for writing. Instructions are all over the Internet, Google is your friend.</p>
+
+<p>My needs are simple:</p>
+
+<ul>
+<li>Lines need to soft-wrap automatically</li>
+<li>Markdown syntax should be highlighted</li>
+<li>A distraction free interface</li>
+<li>A decent color theme, typeface, and line-height</li>
+</ul>
+
+<h2 id="whyvim">Why Vim?</h2>
+
+<p>I think it makes sense to write this because Vim is free, and there are a lot of young writers out there that can&#8217;t afford spending money on writing software that may not fit into their workflow. This is my attempt at <a href="https://www.google.com.ph/search?q=writing+with+vim">&#8220;emphasizing&#8221;</a> this one free option, that it is a good contender to premium software. Yes, it does take some work and effort, but most free software are not as reliable as Vim, it could be well worth it in the end.</p>
+
+<h2 id="iterm2">iTerm2</h2>
+
+<p>The native terminal app on OSX is decent, but it doesn&#8217;t support colors and fonts well enough. So iTerm2 is a hard requirement here.</p>
+
+<p>The following iTerm configuration are personal preferences, but I find that you need to set up the equivalent of these to get the most of iTerm.</p>
+
+<h3 id="installingthesolarizedtheme">Installing the Solarized theme</h3>
+
+<p>Download it from <a href="http://ethanschoonover.com/solarized">Ethan Schoonover&#8217;s site</a>, and plop the appropriate color settings in iTerm&#8217;s preference page.</p>
+
+<p>We will talk about a Solarized color scheme plugin for Vim later on in this article, it works amazingly for what we need, but I like that the shell matches Vim. This step is completely optional.</p>
+
+<h3 id="allowingitalicfonts">Allowing italic fonts</h3>
+
+<p>In iTerm&#8217;s preference window, there&#8217;s a tickbox for italic text under the Text panel. This is a bit misleading because it doesn&#8217;t work out of the box, you&#8217;ll have to manually add the escape sequences for italic so that iTerm understands that it should use the italic fonts between those markers in the screen.</p>
+
+<p>Using <a href="https://gist.github.com/sos4nt/3187620">this Gist</a> create a file somewhere. Then on your terminal enter <code>tic filename</code>. Then on iTerms preferences window, change the Terminal Type to <code>xterm-256color-italic</code>. At this point you&#8217;ll want to restart iTerm or spawn a new window to work on to see the changes register.</p>
+
+<h3 id="pickingabettertypeface">Picking a better typeface</h3>
+
+<p>I usually use the Powerline patched Menlo typeface to write code, known as Meslo. It doesn&#8217;t have italics and the <strong>bold</strong> isn&#8217;t even a <em>real bold font</em>. The visual aids of the Powerline fonts outweigh having real italics and bold typefaces, and so I just go with Meslo for my day job. But when blogging, I don&#8217;t need the Powerline symbols, and so I have the luxury to use a font family.</p>
+
+<p><a href="http://www.google.com/fonts/specimen/Cousine">Cousine</a> is a free font family on Google Fonts, and I sync it down to my Macbook using <a href="http://www.fonts.com/web-fonts/google">Skyfonts</a>. This typeface has both <strong>bold</strong> and <em>italic</em> support, and is monospaced. It also closely resembles the font on iA Writer so that&#8217;s a plus.</p>
+
+<p>Once downloaded configure it on iTerms preference window, and pick a size you&#8217;re comfortable with, when writing I prefer nothing lower than 16pts.</p>
+
+<p>While you&#8217;re at it, make sure you set the line-height to a minimum of 1.4 to improve readability.</p>
+
+<h3 id="updatingvim">Updating Vim</h3>
+
+<p>In the next section, we&#8217;re going into Vim plugins, most of these plugins require Vim 7.4 or higher. It&#8217;s a tricky afair updating Vim on OSX. My preferred method is through <a href="http://brew.sh/">homebrew</a>. Then just <code>brew install vim</code>. Make sure to refresh your shell and run <code>vim --version</code> to verify.</p>
+
+<hr />
+
+<h2 id="vimplugins">Vim Plugins</h2>
+
+<p>Firstly install a package manager. My poison is <a href="https://github.com/gmarik/Vundle.vim">Vundle</a>. This allows you to install Vim plugins straight from Github.</p>
+
+<h3 id="somebasicvimconfiguration">Some basic Vim configuration</h3>
+
+<p>You might want to be able to use your trackpad to scroll, sometimes it&#8217;s just more convenient for skimming over text than jumping around.</p>
+
+<pre><code class="vim">&quot; Enable mouse scroll
+:set mouse=nicr
+</code></pre>
+
+<p>I use 2 spaces as tabs when coding, might not be the best when writing blogs, but I like consistency. I use the same soft tabs in writing as well.</p>
+
+<pre><code class="vim">&quot; Soft tabs
+set tabstop=2 shiftwidth=2 expandtab
+</code></pre>
+
+<p>The native Vim on OSX already has the following as a default, but since we installed over homebrew, we&#8217;ll have to set this manually. The reason being Apple keyboards' &#8220;Backward Delete&#8221; registers as a regular delete in terminals, and so we don&#8217;t see expected behavior withing Vim. Non-OSX users don&#8217;t have to worry about this.</p>
+
+<pre><code class="vim">&quot; Backspace behavior
+set backspace=2
+</code></pre>
+
+<p>We&#8217;ll need this so our beautiful syntax highlighting and color plugins work later.</p>
+
+<pre><code class="vim">&quot; Enable Syntax Highlighting
+syntax enable
+</code></pre>
+
+<p>Remember the time when F2 saved any file, game, etc. You&#8217;d want this to avoid hitting <code>ESC :w ENTER</code> all the time.</p>
+
+<pre><code class="vim">&quot; &lt;F2&gt; to save
+:nnoremap &lt;F2&gt; :w&lt;cr&gt;
+:inoremap &lt;F2&gt; &lt;c-o&gt;:w&lt;cr&gt;
+</code></pre>
+
+<h3 id="distractionfreewritingwithgoyo">Distraction Free Writing with Goyo</h3>
+
+<p><a href="https://github.com/junegunn/goyo.vim">Goyo</a> takes cue from distraction free writing tools like WriteRoom and iA writer. It removes all of Vim&#8217;s <strong>chrome</strong>, then centers the text and sets the text within a fixed line-width or CPL.</p>
+
+<pre><code class="vim">Plugin 'junegunn/goyo.vim'
+</code></pre>
+
+<p>The default CPL is 80, this might be too long for some people like myself, I prefer anything between 65 and 72. To start Goyo automatically and set a custom CPL add this to your .vimrc.</p>
+
+<pre><code class="vim">au Filetype markdown Goyo 72
+</code></pre>
+
+<p>This plugin is almost perfect, but the way it hides the <strong>chrome</strong> is through trickery, and like any trick-based solution, there are drawbacks, for one <code>:q</code> (exit) will not behave as expected. Instead of closing Vim, it will close a window Goyo has spawned. To restore the expected behavior add the following to your .vimrc:</p>
+
+<pre><code class="vim">&quot; c/o https://github.com/junegunn/goyo.vim/wiki/Customization
+function! s:goyo_enter()
+  let b:quitting = 0
+  let b:quitting_bang = 0
+  autocmd QuitPre &lt;buffer&gt; let b:quitting = 1
+  cabbrev &lt;buffer&gt; q! let b:quitting_bang = 1 &lt;bar&gt; q!
+endfunction
+
+function! s:goyo_leave()
+  &quot; Quit Vim if this is the only remaining buffer
+  if b:quitting &amp;&amp; len(filter(range(1, bufnr('$')), 'buflisted(v:val)')) == 1
+    if b:quitting_bang
+      qa!
+    else
+      qa
+    endif
+  endif
+endfunction
+
+autocmd User GoyoEnter call &lt;SID&gt;goyo_enter()
+autocmd User GoyoLeave call &lt;SID&gt;goyo_leave()
+</code></pre>
+
+<h3 id="beautifulcolorswithsolarizedandpencil">Beautiful colors with Solarized and Pencil</h3>
+
+<p>I personally use:</p>
+
+<pre><code class="vim">Plugin 'altercation/vim-colors-solarized'
+</code></pre>
+
+<p>But I have seen and also liked:</p>
+
+<pre><code class="vim">Plugin 'reedes/vim-colors-pencil'
+</code></pre>
+
+<p>Firstly, you will start hearing more about <a href="https://github.com/reedes">Reede Esau</a> if you decide to commit to writing in Vim and continue improving your setup. He has a vast and useful <a href="http://wynnnetherland.com/journal/reed-esau-s-growing-list-of-vim-plugins-for-writers/">collection</a> of Vim plugins intended for writers. For our bare minimum approach, we will use one of his Plugins, more about that later. Secondly, I prefer the light version of Solarized when writing, a white screen will not only ruin your sleep cycles, it also easily fatigues your eyes faster. I can go for the Dark theme to avoid it but I find the lighter colors are a bit more relaxing when writing.</p>
+
+<p>To enable these colors, add this to your .vimrc:</p>
+
+<pre><code class="vim">:set background=light
+:colorscheme solarized
+&quot; or pencil in place of solarized
+</code></pre>
+
+<h3 id="syntaxhighlighting">Syntax Highlighting</h3>
+
+<p>If you intend to blog on Vim, then likely you&#8217;ll use Markdown to extend your layouting capability. For this we use:</p>
+
+<pre><code class="vim">Plugin 'plasticboy/vim-markdown'
+</code></pre>
+
+<p>I prefer this over <a href="https://github.com/tpope/vim-markdown">tpope&#8217;s version</a> because it supports front-matter which we use in <a href="https://lilii.co">Lilii</a>, and has slightly better highlighting. One reason I&#8217;d use tpope&#8217;s version over plasticboy&#8217;s is because it supports Vim&#8217;s conceal to hide modifier markups for bold and italic text, thus fully utilizing our italic font configuration for iTerm.</p>
+
+<p>These plugins automatically identify markdown files, in my experience, by extension (.md). If you want it to treat text (.txt) files as Markdown then add this to your .vimrc:</p>
+
+<pre><code class="vim">au BufRead,BufNewFile *.txt set filetype=markdown
+</code></pre>
+
+<p>plasticboy&#8217;s plugin folds Markdown content by heading, and most wouldn&#8217;t like that feature by default, so if you&#8217;re using his plugin, add this to disable folding:</p>
+
+<pre><code class="vim">let g:vim_markdown_folding_disabled=1
+</code></pre>
+
+<p>To enable front-matter support:</p>
+
+<pre><code class="vim">let g:vim_markdown_frontmatter=1
+</code></pre>
+
+<p>This is very useful if you blog on Jekkyl.</p>
+
+<h3 id="softwrapconcealingmarkupbetterundopoints">Soft wrap, Concealing Markup, Better undo points</h3>
+
+<p>By default vim will break your words into the next line when it reaches the line-width. This is not a behavior most writers would expect, but it does make sense for writing code. This can be fixed through Vim configuration but then you&#8217;d have to follow that up with updated navigation key mappings. To simplify things, we can use vim-pencil:</p>
+
+<pre><code class="vim">Plugin 'reedes/vim-pencil'
+</code></pre>
+
+<p>It won&#8217;t work out of the box, possibly the basic premise is that we only want to use this plugin on a small set of file types, i.e. text and Markdown. To enable it, we add:</p>
+
+<pre><code class="vim">ugroup pencil
+  autocmd!
+  autocmd FileType markdown,mkd call pencil#init()
+  autocmd FileType text         call pencil#init()
+augroup END
+</code></pre>
+
+<p>Now we enable soft wrap mode by default:</p>
+
+<pre><code class="vim">let g:pencil#wrapModeDefault = 'soft'
+</code></pre>
+
+<p>And we enable conceal support. Do note that at this time, only tpope&#8217;s vim-markdown plugin supports conceal markers, so to utilize this you&#8217;ll have to use his plugin alongside vim-pencil:</p>
+
+<pre><code class="vim">let g:pencil#conceallevel = 3
+let g:pencil#concealcursor = 'c'
+</code></pre>
+
+<p>The undo points improvement seems to be enabled by default. When you undo you will notice that it restores to a state where a punctuation has been entered.</p>
+
+<h3 id="baselineconclusion">Baseline Conclusion</h3>
+
+<p>This wraps up the baseline plugins that I use for writing with Vim. Aside from these plugins I use a few more for editing, mostly Reed&#8217;s, and a couple for file management.</p>
+
+<p>At this point, you can start writing.</p>
+
+<h2 id="finalround:extras">Final Round: Extras</h2>
+
+<p>I&#8217;m not going to elaborate on these items, as I found they are more preferential than essential.</p>
+
+<pre><code class="vim">Plugin 'scroloose/nerdtree'
+</code></pre>
+
+<p>This is a sidepane file browser, useful for quickly swapping around files, I try to maintain only a single buffer session on Vim so I don&#8217;t find this plugin as useful as when I am writing code. But it&#8217;s still worth having and useful on some occasions.</p>
+
+<pre><code class="vim">Plugin 'kien/ctrlp.vim'
+</code></pre>
+
+<p>I would usually use this more than NERDTree, this is a fuzzy name file browser, you can type a partial name and will display a list of matching files you can select to open. This is useful on some occasions.</p>
+
+<pre><code class="vim">Plugin 'reedes/vim-wordy'
+</code></pre>
+
+<p>This is a plugin that highlights possible problems in your writing. I&#8217;m not well acquainted with this plugin, but at first glance it looks really useful, I wish to use it more. I can&#8217;t even describe how it works yet, so here&#8217;s a snippet from the Github page:</p>
+
+<blockquote>
+<p><em>wordy</em> is not a grammar checker. Nor is it a guide to proper word usage. Rather, wordy is a lightweight tool to assist you in identifying those words and phrases known for their history of misuse, abuse, and overuse, at least according to usage experts.</p>
+
+<ul>
+<li><a href="https://github.com/reedes/vim-wordy">reedes/vim-wordy</a></li>
+</ul>
+</blockquote>
+
+<pre><code class="vim">Plugin 'reedes/vim-lexical'
+</code></pre>
+
+<p>This one is amazing, because well, vim isn&#8217;t really for writing and so there is no full English dictionary support. I will explain this as briefly as I could: Dictionary completion, Thesaurus synonym completion, spell-check.</p>
+
+<p>That concludes it, I think one feature I&#8217;m missing is parts-of-speech highlighting. I&#8217;ve once developed a POS highlighter on a web-based text editor, and I miss that feature the most, it&#8217;s the one editing tool I think matches my workflow.</p>
+
+<p>I might write about my Vim adventures for coding, but when I looked at my .vimrc, I realized it&#8217;s too intimidating. For now this should do.</p>
+          <div class="tags"></div>
+          </div>
+        </article>
+        <footer><span><a href="/">home</a> - <a href="/about.html">about</a> - generated with <a href="https://github.com/hmngwy/jenny">jenny</a></span></footer>
+      </div>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/highlight.min.js"></script>
+      <script>hljs.initHighlightingOnLoad();</script>
+    </body>
+  </html>

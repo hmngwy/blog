@@ -1,0 +1,242 @@
+  <!DOCTYPE html>
+  <html>
+    <head>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+      <title>The Pursuit of Less (things) - Manila Functional</title>
+      <link href="/fira_code.css" rel="stylesheet">
+      <link href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/styles/obsidian.min.css" rel="stylesheet">
+      <link href="data:image/x-icon;base64,AAABAAEAEBAQAAEABAAoAQAAFgAAACgAAAAQAAAAIAAAAAEABAAAAAAAgAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAANjY2AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAARERERAAAAAAAAAAAAAAAAEQEBEQAAAAAAAAAAAAAAABEREREAAAAAAAAAAAAAAAARAREBAAAAAAAAAAAAAAAAEREBEQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD//wAA//8AAP//AADwDwAA//8AAPKPAAD//wAA8A8AAP//AADyLwAA//8AAPCPAAD//wAA//8AAP//AAD//wAA" rel="icon" type="image/x-icon">
+      <style>
+        * {
+          -webkit-font-smoothing: antialiased;
+          -moz-osx-font-smoothing: grayscale;
+        }
+        body {
+          background-color: rgb(27, 27, 27);
+          color: #c1c1c1;
+          font-size: 16px;
+          padding: 1em;
+          font-family: 'Fira Code', sans-serif;
+          line-height: 1.75em;
+        }
+        @media (min-width: 760px) { body { font-size: 17px } }
+        header { text-transform: uppercase; }
+        header a { text-decoration: none; color: rgb(67, 67, 67);; } header a:hover { color: #268bd2}
+        article { padding: 0; margin: 1.18em 0; max-width: 87ch; line-height: 3.14ch }
+        article a { color: #b58900; display: inline-block; }
+        article img { max-width: 100% }
+        article blockquote { border-left: 1ch solid #313131; padding: 1.5ch 2ch; border-radius: 3px; background-color: #202020; }
+        article blockquote,
+        article pre { margin: 0; }
+        article pre,
+        article code { background-color: #2b2b2b; border-radius: 3px; font-family: 'Fira Code'; padding: 0.4ch; }
+        article pre { word-break: break-all; width: 100%; }
+        article blockquote :first-of-type { margin-top: 0; }
+        article blockquote :last-of-type { margin-bottom: 0; }
+        article hr { border: 0; border-bottom: 3px solid #2d2d2d; }
+        .heading { font-family: 'Fira Code'; margin-bottom: 2ch; }
+        .heading a { text-decoration: none; }
+        .heading .title { max-width: 650px; font-size: inherit; color: #e1e1e1; display: table-cell; text-transform: uppercase; margin: 0 0 1em; font-weight:400; line-height: 2.5ch;  }
+        .heading .title:hover { text-decoration: underline; }
+        .home { display: inline-block; width: 5ch; text-align:right; margin-right: 2ch; }
+        .heading .stamp { color: #676767; display: table-cell; width: 5ch; text-align:right; padding-right: 2ch; }
+        .home { text-decoration: none; margin-bottom: 1.5em; text-align: left;  color: #cb4b16; } .home:hover { color: #dc322f; }
+        .contents > * { margin: 2ch 0; }
+        .contents { display: inline-block; max-width: 80ch; vertical-align: top; width: 100%; }
+        .contents :first-child { margin-top: 0; }
+        h1, h2, h3, h4, h5, h6 { font-size: 1em; font-weight: 500; margin: 2em 0 1em; }
+        h1, h2, h3 { text-transform: uppercase; margin: 3em 0 1em; }
+        .contents h1 { margin-top: 3ch; border-bottom: 2px solid grey;  }
+        .contents h2 { margin-top: 3ch; border-bottom: 1px solid lightgrey;  }
+        .contents h3 { margin-top: 3ch; margin-bottom: 0; padding-bottom: 0; }
+        .contents > h4,
+        .contents > h5,
+        .contents > h6 { margin-bottom: 0; }
+        .contents > h4 + *,
+        .contents > h5 + *,
+        .contents > h6 + * { margin-top: 0; }
+        .contents h5, .contents h6 { font-weight; normal; }
+        .contents h5, .contents h6 { font-style: italic; }
+        ul { padding-left: 1.75em; } ol { padding-left: 2.75em; }
+        .footnotes { padding: 1em 0 0; font-size: .85em; }
+        .footnotes:before { content: 'FOOTNOTES' }
+        .footnotes hr { display: none; }
+        .footnotes ol { padding-left: 2.85em; line-height: 3ch; }
+        .footnote { vertical-align: super; font-size: .85em; text-decoration: none; line-height: 0; }
+        .tags { margin-top: 3em; font-size: .85em; }
+        .tags a { background-color: #202020; display:inline-block;padding: 0 .5em;border-radius: 4px; }
+        .wrap { max-width: 1024px; margin: 0 auto; }
+        figure { margin: 0 }
+        .hljs { background-color: #202020; padding: 2ch; }
+        footer { margin-top: 5ch; } footer a { color: inherit; }
+        footer span { font-size:.85em; color: grey; }
+      </style>
+    </head>
+    <body>
+      <div class="wrap">
+        <header><a href="/">MANILA FUNCTIONAL</a></header>
+        <article>
+        <div class="heading"><a href="/post/the-pursuit-of-less-things.html"><span class="stamp">07/22</span><h1 class="title">The Pursuit of Less (things)</h1></a></div>
+          <div class="contents">
+          
+
+<h3 id="attemptingtodomorewithless.">Attempting to do more with less.</h3>
+
+<p>While I&#8217;m outlining this article, I asked myself who would want to know what in the hell goes in my bag. Why did I want to write this entry anyway? Then I realized I&#8217;m writing this for myself, and I didn&#8217;t want that to be the case (mostly). So in this entry, I will attempt to discuss the process into how I finally decided which items goes into my bag, kindly bear with me. Seems like an unnecessary task to tightly curate one&#8217;s bag, until like myself, you&#8217;ve hurt your shoulder and permanently ruined your left ankle because you carry too much crap everyday.</p>
+
+<h3 id="whyiwanttocarrylessthings">Why I want to carry less things</h3>
+
+<p>You may have already inferred — health concerns — less of preventive, more of not-make-it-worse-ive.</p>
+
+<p>I&#8217;m a big fan of messenger bags, I like to be able to whip out things when I need them, and I&#8217;m also very much right handed. I&#8217;m currently using a <a href="http://shop.saddler.com/en/product/497/bag-bohlin-brown">brown SDLR Bohlin messenger bag</a>.</p>
+
+<p>I&#8217;ve been carrying weight on my right shoulder for years. When I stand straight in front of a mirror, my right shoulder is visibly 1&#8211;2 inches lower than my left. My gait feels normal and looks normal, I actually took a video of myself walking and running to check, but I have been feeling pain in my inner left foot when running or walking for long periods. Asymmetric discomfort directly correlates to opposite shoulder descent? Probably. But it&#8217;s the explanation I&#8217;ve somehow arm-chair diagnosed myself, it makes the most sense to me, I&#8217;m sort of stuck with it until I see a doctor about it.</p>
+
+<p>You will have different reasons, like most one could be — trying to achieve material zen, we want to be ridden of our material possessions, realizing that it is not what makes us, cheesy - I know. But we are of this world, and this world is of smartphones and computers and creating and The Internet, we need these things almost as much as we need sustenance. In fact, most of us having this concern need these things so that we can afford sustenance.</p>
+
+<p>Your reasons can be anything, you may have or may not have one, it doesn&#8217;t matter.</p>
+
+<h2 id="theprocess">The Process</h2>
+
+<h3 id="1.identifywhatyouactuallydowhenyouneedabag">1. Identify what you actually do, when you need a bag</h3>
+
+<p>For the most part, I make sure to do all my day-job work at home. When I want to write, edit photos, or take photos, I&#8217;m usually outdoors. By outdoors, most of the time it means a local café.</p>
+
+<p>This is what I do when I&#8217;m out and about:</p>
+
+<ul>
+<li>Code</li>
+<li>Write</li>
+<li>Edit</li>
+<li>Take Photos</li>
+<li>Edit Photos</li>
+<li>Note &amp; Sketch</li>
+</ul>
+
+<p>Pretty typical, actually. The problem here lies in that I would only Write, Code, or do Photography exclusively. I&#8217;m not a multitasking wizard, Harry. And each task require different independent tools, and so the contents of my bag isn&#8217;t exactly lean.</p>
+
+<p>To make this premise little bit more visual, we can put exclusive tasks in a single item separated by slashes, so it&#8217;s a little more obvious they&#8217;re mutually exclusive, we can rewrite my list above as:</p>
+
+<ul>
+<li>Code / Writing &amp; Editing / Photography &amp; Editing</li>
+<li>Note &amp; Sketch</li>
+</ul>
+
+<p>The shorter your list, likely the less things you&#8217;ll be carrying around. Also by grouping tasks you do exclusively, you will be able to see items you might be able to consolidate to make your gear more lean.</p>
+
+<h3 id="2.catalogv.">2. Catalog (v.)</h3>
+
+<p>This is what I used to carry around in my bag, not exactly the model of minimalism. This covers all of the tasks above, and a little bit more. But since I don&#8217;t really do all of them everyday, I end up spending too much energy hauling things I never take out.</p>
+
+<ul>
+<li>Sony NEX 5n</li>
+<li>Canon FD f1.8 Lens with NEX-FD Adapter</li>
+<li>11&quot; Macbook Air</li>
+<li>iPad Mini 2</li>
+<li>iPhone 6</li>
+<li>Macbook Air Charger</li>
+<li>iPad Charger</li>
+<li>Two Lightning Cables</li>
+<li>USB to Micro USB Cable</li>
+<li>Pocket Moleskine</li>
+<li>Pen</li>
+<li>Wallet</li>
+<li>Misc. Kit</li>
+<li> Lighter</li>
+<li> Chapstick</li>
+<li> Mints</li>
+<li> Sunglasses</li>
+<li> Apple Earbuds</li>
+<li> Jawbone Bluetooth Headset</li>
+</ul>
+
+<p>With this setup, I write, code, and edit photos all in the Macbook Air. The iPad is there only for the occasional testing, and sometimes as a dual screen stand-in. But for the most part, the iPad provides my mobile Internet connection.</p>
+
+<h3 id="3.consolidatingandthinningitems">3. Consolidating and thinning items</h3>
+
+<p>This is the part where you rethink what you carry around, or replace them with something smaller. A cheaper and more cost-effective path is to consolidate some workflows into devices, below I&#8217;ve moved my photo editing task into the iPad, making me use the Macbook Air less.</p>
+
+<p>The major takeaway here is to do more with less and smaller items.</p>
+
+<h4 id="coding">Coding</h4>
+
+<ul>
+<li>Macbook Air</li>
+<li>Macbook Air Charger (occasional)</li>
+</ul>
+
+<p>Until such time that I can run a NodeJS instance, MongoDB, and a Redis server on my iPad, I will be coding in my Macbook Air.</p>
+
+<p>I have toyed with the idea of running a DigitalOcean droplet as a remote workstation, and shelling in via Prompt on the iPad. But that is gear thinning at a $5/mo cost, and cons like inconsistent keyboard support make it less interesting. The effort of swapping in the Macbook for an iPad from time to time seems more tolerable for now.</p>
+
+<p>I have the late-2014 Macbook Air, the one rated at 9 hours of battery life. I think I&#8217;m getting about 7 hours from it and it justifies not bringing a charger with me most of the time. Coming from the late-2012 model with a 4 hour life span, the battery life increase alone is good enough reason for an upgrade. Leaving the charger at home is now an option.</p>
+
+<h4 id="photographyandediting">Photography and Editing</h4>
+
+<ul>
+<li>iPad</li>
+<li>iPad Charger</li>
+<li>Sony RX100M3</li>
+</ul>
+
+<p>I dropped the NEX-5n and prime lens, figuratively. Besides being less in-your-face, the RX100 is much smaller and incognito. I cannot get rid of a camera in my bag in any instance, so I can only make it smaller. The new camera is flexible enough as a stand-in for the NEX, sure it has a smaller sensor, but it is still more than a decent camera.</p>
+
+<p>The wireless capabilities also allows me to get rid of a cable. As well as drop the need for the Macbook Air when I need to do any editing. I can wirelessly sync the photos to the iPad and work on VSCO. Apple&#8217;s Photo app backs it up to iCloud and makes optimized version everywhere needed. Not only is this camera smaller, it also allows me to haul less gear. This is easily one of the most impactful decisions I&#8217;ve made as it reduces gear in more than one department.</p>
+
+<h4 id="writingandediting">Writing and Editing</h4>
+
+<ul>
+<li>iPad</li>
+<li>iPad Charger</li>
+<li>Apple Keyboard (occasional)</li>
+</ul>
+
+<p>I used to write with the Macbook Air, then edit on the iPad. It didn&#8217;t feel right to have that much power just to put letters in a text file, and so I decided to dedicated writing on the iPad as well. A keyboard is usually necessary, but I find myself writing at the same speed albeit less satisfying on the on-screen keyboard. Most can&#8217;t skip the keyboard, and sometimes I can&#8217;t too, which is when I take the Apple Keyboard from my home office.</p>
+
+<p>At this point the iPad serves more than the Internet connection provider. It is now also for Writing, Editing, and Photo Editing. It can work as a stand-in for the Macbook Air in most tasks.</p>
+
+<h4 id="finallist">Final List</h4>
+
+<ul>
+<li>Coding</li>
+<li> Macbook Air</li>
+<li> Macbook Air Charger</li>
+<li>Writing &amp; Photography</li>
+<li> iPad</li>
+<li> iPad Charger</li>
+<li> Lightning Cable</li>
+<li>Sony RX100M3</li>
+<li>Pocket Moleskine</li>
+<li>Lamy Fountain Pen</li>
+<li>Misc. Kit</li>
+<li> Lighter</li>
+<li> Chapstick</li>
+<li> Mints</li>
+<li> Sunglasses</li>
+<li> Apple Earbuds</li>
+<li> Jawbone Bluetooth Headset</li>
+</ul>
+
+<h5 id="step3conclusion.">Step 3 Conclusion.</h5>
+
+<p>We have delegated more tasks to the iPad by changing some gear, and changing some workflows. For 2 of the 3 general workflows I tackle, I can just swap out the Macbook Air for the iPad.</p>
+
+<h3 id="4.refine">4. Refine</h3>
+
+<p>Possible points of improvement in my setup is to be able to get rid of the Macbook Air altogether and code in the iPad. Multi-tasking is coming to iOS9 but it still doesn&#8217;t guarantee applications on heavy development, not until they dedicate a department in making the iPad a development tool. The rumored iPad Pro will contribute nothing, it is so large, I might as well carry a 13&quot; Macbook Air.</p>
+
+<p>You will want to continue refining your bag, your workflows may change or you may have to start doing more different tasks. You may be taking with you some items less and less, and realize you can do away with them. And finally, watch out for tasks that you can consolidate into one tool, or possible changes to your workflow that will greatly reduce gear.</p>
+
+<hr />
+
+<p>P.S. I know some of the points here can be improved by simply using an Android device, and I do acknowledge their power. iCloud photo and document syncing is too helpful at the moment, and I don&#8217;t want to be bothered to manually set up sync solutions. TL:DR; Too invested in iCloud to change platforms.</p>
+          <div class="tags"></div>
+          </div>
+        </article>
+        <footer><span><a href="/">home</a> - <a href="/about.html">about</a> - generated with <a href="https://github.com/hmngwy/jenny">jenny</a></span></footer>
+      </div>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/highlight.min.js"></script>
+      <script>hljs.initHighlightingOnLoad();</script>
+    </body>
+  </html>

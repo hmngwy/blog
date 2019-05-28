@@ -1,0 +1,138 @@
+  <!DOCTYPE html>
+  <html>
+    <head>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+      <title>Revisiting MirrorMoon - Manila Functional</title>
+      <link href="/fira_code.css" rel="stylesheet">
+      <link href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/styles/obsidian.min.css" rel="stylesheet">
+      <link href="data:image/x-icon;base64,AAABAAEAEBAQAAEABAAoAQAAFgAAACgAAAAQAAAAIAAAAAEABAAAAAAAgAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAANjY2AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAARERERAAAAAAAAAAAAAAAAEQEBEQAAAAAAAAAAAAAAABEREREAAAAAAAAAAAAAAAARAREBAAAAAAAAAAAAAAAAEREBEQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD//wAA//8AAP//AADwDwAA//8AAPKPAAD//wAA8A8AAP//AADyLwAA//8AAPCPAAD//wAA//8AAP//AAD//wAA" rel="icon" type="image/x-icon">
+      <style>
+        * {
+          -webkit-font-smoothing: antialiased;
+          -moz-osx-font-smoothing: grayscale;
+        }
+        body {
+          background-color: rgb(27, 27, 27);
+          color: #c1c1c1;
+          font-size: 16px;
+          padding: 1em;
+          font-family: 'Fira Code', sans-serif;
+          line-height: 1.75em;
+        }
+        @media (min-width: 760px) { body { font-size: 17px } }
+        header { text-transform: uppercase; }
+        header a { text-decoration: none; color: rgb(67, 67, 67);; } header a:hover { color: #268bd2}
+        article { padding: 0; margin: 1.18em 0; max-width: 87ch; line-height: 3.14ch }
+        article a { color: #b58900; display: inline-block; }
+        article img { max-width: 100% }
+        article blockquote { border-left: 1ch solid #313131; padding: 1.5ch 2ch; border-radius: 3px; background-color: #202020; }
+        article blockquote,
+        article pre { margin: 0; }
+        article pre,
+        article code { background-color: #2b2b2b; border-radius: 3px; font-family: 'Fira Code'; padding: 0.4ch; }
+        article pre { word-break: break-all; width: 100%; }
+        article blockquote :first-of-type { margin-top: 0; }
+        article blockquote :last-of-type { margin-bottom: 0; }
+        article hr { border: 0; border-bottom: 3px solid #2d2d2d; }
+        .heading { font-family: 'Fira Code'; margin-bottom: 2ch; }
+        .heading a { text-decoration: none; }
+        .heading .title { max-width: 650px; font-size: inherit; color: #e1e1e1; display: table-cell; text-transform: uppercase; margin: 0 0 1em; font-weight:400; line-height: 2.5ch;  }
+        .heading .title:hover { text-decoration: underline; }
+        .home { display: inline-block; width: 5ch; text-align:right; margin-right: 2ch; }
+        .heading .stamp { color: #676767; display: table-cell; width: 5ch; text-align:right; padding-right: 2ch; }
+        .home { text-decoration: none; margin-bottom: 1.5em; text-align: left;  color: #cb4b16; } .home:hover { color: #dc322f; }
+        .contents > * { margin: 2ch 0; }
+        .contents { display: inline-block; max-width: 80ch; vertical-align: top; width: 100%; }
+        .contents :first-child { margin-top: 0; }
+        h1, h2, h3, h4, h5, h6 { font-size: 1em; font-weight: 500; margin: 2em 0 1em; }
+        h1, h2, h3 { text-transform: uppercase; margin: 3em 0 1em; }
+        .contents h1 { margin-top: 3ch; border-bottom: 2px solid grey;  }
+        .contents h2 { margin-top: 3ch; border-bottom: 1px solid lightgrey;  }
+        .contents h3 { margin-top: 3ch; margin-bottom: 0; padding-bottom: 0; }
+        .contents > h4,
+        .contents > h5,
+        .contents > h6 { margin-bottom: 0; }
+        .contents > h4 + *,
+        .contents > h5 + *,
+        .contents > h6 + * { margin-top: 0; }
+        .contents h5, .contents h6 { font-weight; normal; }
+        .contents h5, .contents h6 { font-style: italic; }
+        ul { padding-left: 1.75em; } ol { padding-left: 2.75em; }
+        .footnotes { padding: 1em 0 0; font-size: .85em; }
+        .footnotes:before { content: 'FOOTNOTES' }
+        .footnotes hr { display: none; }
+        .footnotes ol { padding-left: 2.85em; line-height: 3ch; }
+        .footnote { vertical-align: super; font-size: .85em; text-decoration: none; line-height: 0; }
+        .tags { margin-top: 3em; font-size: .85em; }
+        .tags a { background-color: #202020; display:inline-block;padding: 0 .5em;border-radius: 4px; }
+        .wrap { max-width: 1024px; margin: 0 auto; }
+        figure { margin: 0 }
+        .hljs { background-color: #202020; padding: 2ch; }
+        footer { margin-top: 5ch; } footer a { color: inherit; }
+        footer span { font-size:.85em; color: grey; }
+      </style>
+    </head>
+    <body>
+      <div class="wrap">
+        <header><a href="/">MANILA FUNCTIONAL</a></header>
+        <article>
+        <div class="heading"><a href="/post/revisiting-mirrormoon.html"><span class="stamp">05/04</span><h1 class="title">Revisiting MirrorMoon</h1></a></div>
+          <div class="contents">
+          
+
+<h2 id="hereisagamethatbuildsuponobscurity">Here is a game that builds upon obscurity</h2>
+
+<p>&#8220;I have a terrible headache.&#8221; Today I revisited Santa Ragione’s MirrorMoon, now in Season 73. It’s still the compelling game that it is almost two years ago. Personally I think it holds up, I felt the same feelings of curiosity and awe when I first played it and figured out things for myself. But of course, now I have some sort of idea on how to go about things, that doesn’t deter how wonderfully the game unravels itself to the player.</p>
+
+<figure>
+<img src="https://dl.dropboxusercontent.com/u/3293794/Mirrormoon%20Photos/Screen%20Shot%202015-05-04%20at%204.33.22%20PM.png" alt="" />
+<figcaption></figcaption>
+</figure>
+
+<p><em>Kind-of-spoilers ahead.</em></p>
+
+<p>The game doesn’t tell you anything beyond what your mouse and keyboard will do, what you do with them is up to you. That is both a brave and important design decision that the developers have made. It gives the player pride in learning how things works, amazement in the realization, and a sense of ownership. One of a lot of things that makes this game worthwhile.</p>
+
+<p>Going back to a game where you figured how to work everything out, gives you a sense of nostalgic ownership too. Like you’ve just dusted off that old car in your garage, realized it still runs despite sitting there idle for years, and then taking it for a drive around the block. Booting up the ship, really felt like I was booting up “my” ship.</p>
+
+<figure>
+<img src="https://dl.dropboxusercontent.com/u/3293794/Mirrormoon%20Photos/Screen%20Shot%202015-05-04%20at%204.34.38%20PM.png" alt="" />
+<figcaption></figcaption>
+</figure>
+
+<p>The mundane routine of booting up the “ship” - albeit some would think is completely unnecessary - makes the ship feel a little bit more real, it also almost makes it feel like a job which subtly adds context to the story. The way it makes you go through this seemingly unnecessary routine at the very start of the game plays a major role in its message of what’s to come. Which I presume “You need to start learning things by yourself.”</p>
+
+<figure>
+<img src="https://dl.dropboxusercontent.com/u/3293794/Mirrormoon%20Photos/Screen%20Shot%202015-05-04%20at%204.33.33%20PM.png" alt="" />
+<figcaption></figcaption>
+</figure>
+
+<p>How unintuitive it is at first may stop some players. But the game masterfully taunts the player to learn it, every progress they make, they are rewarded with both an interesting and mysterious development, increasingly each time. “Does that make sense? Should it?” You would find yourself asking a lot of times, but then almost immediately accept that this is the way things work here.</p>
+
+<p>Once things finally click, it’s almost as if it all clicks at once, the obscurity drifts away like fog and you are left to wonder if it was actually vague or were you just not thinking the right way.</p>
+
+<figure>
+<img src="https://dl.dropboxusercontent.com/u/3293794/Mirrormoon%20Photos/Screen%20Shot%202015-05-04%20at%204.33.59%20PM.png" alt="" />
+<figcaption></figcaption>
+</figure>
+
+<p>The screen slowly starts to shake and a flash of light climaxes a scene. You are back in your ship, and you learn you need to do it again. Why? You do it anyway. At this point, you know you are an explorer.</p>
+
+<p>I have lots of kind words to say about Santa Ragione, but let’s leave it at that for now. I am sure I will have more opportunities to say them.</p>
+
+<p><img src="https://dl.dropboxusercontent.com/u/3293794/Mirrormoon%20Photos/Screen%20Shot%202015-05-04%20at%204.33.10%20PM.png" alt="" /> <img src="https://dl.dropboxusercontent.com/u/3293794/Mirrormoon%20Photos/Screen%20Shot%202015-05-04%20at%204.33.09%20PM.png" alt="" /></p>
+
+<figure>
+<img src="https://dl.dropboxusercontent.com/u/3293794/Mirrormoon%20Photos/Screen%20Shot%202015-05-04%20at%204.34.30%20PM.png" alt="" />
+<figcaption></figcaption>
+</figure>
+          <div class="tags"></div>
+          </div>
+        </article>
+        <footer><span><a href="/">home</a> - <a href="/about.html">about</a> - generated with <a href="https://github.com/hmngwy/jenny">jenny</a></span></footer>
+      </div>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/highlight.min.js"></script>
+      <script>hljs.initHighlightingOnLoad();</script>
+    </body>
+  </html>

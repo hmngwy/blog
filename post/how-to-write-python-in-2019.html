@@ -1,0 +1,185 @@
+  <!DOCTYPE html>
+  <html>
+    <head>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+      <title>Writing Python in 2019 - Manila Functional</title>
+      <link href="/fira_code.css" rel="stylesheet">
+      <link href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/styles/obsidian.min.css" rel="stylesheet">
+      <link href="data:image/x-icon;base64,AAABAAEAEBAQAAEABAAoAQAAFgAAACgAAAAQAAAAIAAAAAEABAAAAAAAgAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAANjY2AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAARERERAAAAAAAAAAAAAAAAEQEBEQAAAAAAAAAAAAAAABEREREAAAAAAAAAAAAAAAARAREBAAAAAAAAAAAAAAAAEREBEQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD//wAA//8AAP//AADwDwAA//8AAPKPAAD//wAA8A8AAP//AADyLwAA//8AAPCPAAD//wAA//8AAP//AAD//wAA" rel="icon" type="image/x-icon">
+      <style>
+        * {
+          -webkit-font-smoothing: antialiased;
+          -moz-osx-font-smoothing: grayscale;
+        }
+        body {
+          background-color: rgb(27, 27, 27);
+          color: #c1c1c1;
+          font-size: 16px;
+          padding: 1em;
+          font-family: 'Fira Code', sans-serif;
+          line-height: 1.75em;
+        }
+        @media (min-width: 760px) { body { font-size: 17px } }
+        header { text-transform: uppercase; }
+        header a { text-decoration: none; color: rgb(67, 67, 67);; } header a:hover { color: #268bd2}
+        article { padding: 0; margin: 1.18em 0; max-width: 87ch; line-height: 3.14ch }
+        article a { color: #b58900; display: inline-block; }
+        article img { max-width: 100% }
+        article blockquote { border-left: 1ch solid #313131; padding: 1.5ch 2ch; border-radius: 3px; background-color: #202020; }
+        article blockquote,
+        article pre { margin: 0; }
+        article pre,
+        article code { background-color: #2b2b2b; border-radius: 3px; font-family: 'Fira Code'; padding: 0.4ch; }
+        article pre { word-break: break-all; width: 100%; }
+        article blockquote :first-of-type { margin-top: 0; }
+        article blockquote :last-of-type { margin-bottom: 0; }
+        article hr { border: 0; border-bottom: 3px solid #2d2d2d; }
+        .heading { font-family: 'Fira Code'; margin-bottom: 2ch; }
+        .heading a { text-decoration: none; }
+        .heading .title { max-width: 650px; font-size: inherit; color: #e1e1e1; display: table-cell; text-transform: uppercase; margin: 0 0 1em; font-weight:400; line-height: 2.5ch;  }
+        .heading .title:hover { text-decoration: underline; }
+        .home { display: inline-block; width: 5ch; text-align:right; margin-right: 2ch; }
+        .heading .stamp { color: #676767; display: table-cell; width: 5ch; text-align:right; padding-right: 2ch; }
+        .home { text-decoration: none; margin-bottom: 1.5em; text-align: left;  color: #cb4b16; } .home:hover { color: #dc322f; }
+        .contents > * { margin: 2ch 0; }
+        .contents { display: inline-block; max-width: 80ch; vertical-align: top; width: 100%; }
+        .contents :first-child { margin-top: 0; }
+        h1, h2, h3, h4, h5, h6 { font-size: 1em; font-weight: 500; margin: 2em 0 1em; }
+        h1, h2, h3 { text-transform: uppercase; margin: 3em 0 1em; }
+        .contents h1 { margin-top: 3ch; border-bottom: 2px solid grey;  }
+        .contents h2 { margin-top: 3ch; border-bottom: 1px solid lightgrey;  }
+        .contents h3 { margin-top: 3ch; margin-bottom: 0; padding-bottom: 0; }
+        .contents > h4,
+        .contents > h5,
+        .contents > h6 { margin-bottom: 0; }
+        .contents > h4 + *,
+        .contents > h5 + *,
+        .contents > h6 + * { margin-top: 0; }
+        .contents h5, .contents h6 { font-weight; normal; }
+        .contents h5, .contents h6 { font-style: italic; }
+        ul { padding-left: 1.75em; } ol { padding-left: 2.75em; }
+        .footnotes { padding: 1em 0 0; font-size: .85em; }
+        .footnotes:before { content: 'FOOTNOTES' }
+        .footnotes hr { display: none; }
+        .footnotes ol { padding-left: 2.85em; line-height: 3ch; }
+        .footnote { vertical-align: super; font-size: .85em; text-decoration: none; line-height: 0; }
+        .tags { margin-top: 3em; font-size: .85em; }
+        .tags a { background-color: #202020; display:inline-block;padding: 0 .5em;border-radius: 4px; }
+        .wrap { max-width: 1024px; margin: 0 auto; }
+        figure { margin: 0 }
+        .hljs { background-color: #202020; padding: 2ch; }
+        footer { margin-top: 5ch; } footer a { color: inherit; }
+        footer span { font-size:.85em; color: grey; }
+      </style>
+    </head>
+    <body>
+      <div class="wrap">
+        <header><a href="/">MANILA FUNCTIONAL</a></header>
+        <article>
+        <div class="heading"><a href="/post/how-to-write-python-in-2019.html"><span class="stamp">03/09</span><h1 class="title">Writing Python in 2019</h1></a></div>
+          <div class="contents">
+          
+
+<p>Like a sane person.</p>
+
+<h3 id="usepython3">Use Python 3</h3>
+
+<p>Like <a href="/how-to-write-python-in-2018.md">last time</a>, I like to implore you to write in Python 3, Python 2&#8217;s EOL is next year, 2020.</p>
+
+<h3 id="readpep20">Read PEP 20</h3>
+
+<p><code>python -m this</code>, every now and again. Granted I forget to read this since the last time I wrote this article, but I kept some of it by heart. Let me go over my last year&#8217;s take-aways.</p>
+
+<blockquote>
+<p>Explicit is still better than implicit</p>
+</blockquote>
+
+<p>I think I can count a handful of ways I&#8217;ve tried to maneuver our way out of creating an implicit behavior in our API to provide &#8220;cool&#8221; features, this is easy deceivingly easy to forget.</p>
+
+<blockquote>
+<p>Flat is better than nested</p>
+</blockquote>
+
+<p>This isn&#8217;t always the case, and I&#8217;ve modified what this means for me, a lot of the API that I write is no longer flat, real flat becomes hard to maintain and communicate with sparse documentation. &#8220;Flat&#8221; is a relative term, find your own &#8220;flat&#8221;.</p>
+
+<blockquote>
+<p>Sparse is better than dense</p>
+</blockquote>
+
+<p>This I like to keep as is, as this keeps us from feature creep.</p>
+
+<blockquote>
+<p>If the implementation is hard to explain, it&#8217;s a bad idea</p>
+</blockquote>
+
+<p>This is still true, especially for me, I tend to envision really expensive APIs that I end up later dismissing as too complicated literally at the end of the same day I thought of it. It helps to have people call you out on it.</p>
+
+<h3 id="writedocstrings">Write Docstrings</h3>
+
+<p>I ended up writing docstrings in an arbitrary format, because we don&#8217;t really generate documentation for it. Which is not a good thing. To enforce writing docstrings, you should start generating API documentation for it.</p>
+
+<p>When you generate documentation from docstrings, you can get a clear picture of your API as well. This helps you find code to improve.</p>
+
+<h3 id="uselinters">Use Linters</h3>
+
+<p>I use a combination of Flake8, and Pylint, because I hate myself. However, I&#8217;ve adjusted them to fit <a href="https://github.com/ambv/black">black</a>&#8217;s requirements to keep me sane.</p>
+
+<p>If you&#8217;re using Neovim, use <a href="https://github.com/sbdchd/neoformat">Neoformat</a> to run black, and use <a href="https://github.com/w0rp/ale">Ale</a> for the linters.</p>
+
+<h3 id="usepyenvtomanagepythonversions">Use pyenv to manage Python versions</h3>
+
+<p>Stop using brew, or other package managers. They&#8217;re opinionated, they don&#8217;t care about maintaining multiple Python versions, and it&#8217;s better to have your own opinion about it.</p>
+
+<p>Use <a href="https://github.com/pyenv/pyenv">pyenv</a> to install multiple python versions, and set the python version on your project&#8217;s root directory.</p>
+
+<h3 id="usevenvsetup.pyandvextomanagedependenciesandyourvirtualenvironment">Use venv, setup.py, and vex to manage dependencies and your virtual environment</h3>
+
+<p>I&#8217;ve grown out of love with pipenv, it&#8217;s more effort than it is worth.</p>
+
+<p>So here&#8217;s what you should be doing. Everything should be written as a python package, even applications, just package them already and thank yourself later.</p>
+
+<h4 id="1.manageyourpackagesinsetup.py">1. Manage your packages in setup.py</h4>
+
+<ul>
+<li>Dependencies go into setup.py <code>install_requires</code></li>
+<li>Development dependencies go into <code>extras_requires</code></li>
+</ul>
+
+<p>Here&#8217;s a nice <a href="https://github.com/kennethreitz/setup.py/blob/master/setup.py">skeleton for setup.py</a>.</p>
+
+<h4 id="2.manageyourvirtualenvironmentwithvenvandvex">2. Manage your virtual environment with venv, and vex</h4>
+
+<ul>
+<li>Create it in your project folder <code>python3 -m venv .venv</code></li>
+<li>Run a shell with it <code>vex --path .venv</code></li>
+<li>Install your package <code>pip3 install -e '.[dev]'</code> (where <code>dev</code> is an EXTRAS dictionary of development dependencies)</li>
+</ul>
+
+<h3 id="versionyourpackages">Version your packages</h3>
+
+<p>Now that everything you work on is a package, version it. Use <a href="https://pypi.org/project/bumpversion/">bumpversion</a>. Tag it in your repo, use <a href="https://github.com/petervanderdoes/gitflow-avh">gitflow</a>.</p>
+
+<h3 id="unittestsandintegrationtests">Unit Tests, and Integration Tests</h3>
+
+<p>Write two tests, Unit Tests and Integration Tests. Where:</p>
+
+<ol>
+<li>Unit Tests are just the ol' reliable testing, and</li>
+<li>Write Integration Tests such that they are sample use-cases of your API as a consumer, this will also provide a nice set of examples on how to use your APIs for your colleagues</li>
+</ol>
+
+<p>Use the <a href="https://docs.python.org/3/library/unittest.mock.html">Mock</a> class a lot more in your tests, separate test responsibilities.</p>
+
+<h3 id="readabook">Read a book</h3>
+
+<p>Lastly, I highly recommend the <a href="https://www.amazon.com/Modern-Python-Standard-Library-Cookbook-ebook/dp/B07C5Q59ZZ">Standard Library Cookbook</a> by Alessandro Molina. A few samples are discussed in <a href="https://talkpython.fm/episodes/show/197/modern-python-standard-library-cookbook">Talk Python to Me #197</a>. Go and check it out.</p>
+          <div class="tags"><a href="/tag/python">python</a></div>
+          </div>
+        </article>
+        <footer><span><a href="/">home</a> - <a href="/about.html">about</a> - generated with <a href="https://github.com/hmngwy/jenny">jenny</a></span></footer>
+      </div>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/highlight.min.js"></script>
+      <script>hljs.initHighlightingOnLoad();</script>
+    </body>
+  </html>
