@@ -1,6 +1,6 @@
 # Iterables: List Comprehension
 
-This is part of a series, see (Iterables)[/tag/iterables].
+This is part of a series, see [Iterables](/tag/iterables).
 
 Python list comprehension is a shorthand for generating a list, from one or more iterables.
 
