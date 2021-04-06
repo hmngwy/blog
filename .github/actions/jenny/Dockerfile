@@ -1,8 +1,8 @@
 # Container image that runs your code
-FROM alpine:3.10
+FROM guff666/docker-multimarkdown-6:latest
+RUN git clone https://github.com/hmngwy/jenny.git /tmp/jenny
+RUN (cd /tmp/jenny; make install)
 
-# Copies your code file from your action repository to the filesystem path `/` of the container
-COPY entrypoint.sh /entrypoint.sh
-
-# Code file to execute when the docker container starts up (`entrypoint.sh`)
-ENTRYPOINT ["/entrypoint.sh"]
+WORKDIR /blog
+RUN mkdir .dist
+ENTRYPOINT ["jenny"]
