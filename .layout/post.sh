@@ -83,7 +83,7 @@ cat << _EOF_
         <div class="heading"><a href="./"><span class="stamp">$(echo $POST_DATE)</span><h1 class="title">$(echo $POST_TITLE)</h1></a></div>
           <div class="contents">
           $(echo "$POST_CONTENTS")
-          <div class="tags">$(for i in $TAGS; do echo "<a href=\"./tag/$i\">$i</a>"; done;)</div>
+          <div class="tags">$(for i in $TAGS; do echo "<a href=\"../tag/$i\">$i</a>"; done;)</div>
           </div>
         </article>
         <footer><span><a href="/">home</a> - <a href="/about.html">about</a> - generated with <a href="https://github.com/hmngwy/jenny">jenny</a></span></footer>
