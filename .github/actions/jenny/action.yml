@@ -1,6 +1,0 @@
-# action.yml
-name: 'jenny'
-description: 'build with jenny'
-runs:
-  using: 'docker'
-  image: 'Dockerfile'
