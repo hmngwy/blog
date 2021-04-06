@@ -3,9 +3,8 @@ on: [push]
 jobs:
   build_job:
     runs-on: ubuntu-latest
-    name: build with jenny 
+    name:  Build with Jenny
     steps:
     - uses: actions/checkout@v2
-    - name: build to .dist
-      id: jenny
+    - name: Build to .dist
       uses: hmngwy/blog/.github/actions/jenny@master
