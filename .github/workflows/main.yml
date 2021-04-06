@@ -8,3 +8,7 @@ jobs:
     - uses: actions/checkout@v2
     - name: Build to .dist
       uses: hmngwy/jenny@master
+    - name: Publish
+      with:
+        branch: gh-pages
+        folder: .dist
