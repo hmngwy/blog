@@ -3,7 +3,6 @@ DIST=./.dist
 LAYOUT_DIR=./.layout
 STATIC_DIRS="images"
 MARKDOWN_COMMAND="multimarkdown "
-
 function post_hook() {
     cp static/* $DIST/
 }
