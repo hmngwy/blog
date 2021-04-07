@@ -1,4 +1,4 @@
-POSTS_PER_PAGE=14
+POSTS_PER_PAGE=20
 DIST=./.dist
 LAYOUT_DIR=./.layout
 STATIC_DIRS="images"
