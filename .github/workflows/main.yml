@@ -11,7 +11,7 @@ jobs:
     - name: Build to .dist
       uses: hmngwy/jenny@master
     - name: Publish
-      uses: JamesIves/github-pages-deploy-action@4.6.4
+      uses: JamesIves/github-pages-deploy-action@v4.6.4
       with:
         branch: gh-pages
         folder: .dist
