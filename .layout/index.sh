@@ -77,6 +77,7 @@ cat << _EOF_
   <body>
     <div class="wrap">
       <header><a href="/">MANILA FUNCTIONAL</a>
+      <p>I go by @mailmanpat, I'm a Software Engineer, Proprietor, Tech Leader. These are my thoughts.</p>
       $(if [ "$TAGNAME" ]; then echo "-> TAG == <a href=\"/tag/$TAGNAME\">$TAGNAME</a>"; fi)
       $(if [ "$PAGE_NUM" ]; then echo "-> <a href=\"/page/$PAGE_NUM.html\">Page $PAGE_NUM</a>"; fi)
       </header>
@@ -86,7 +87,7 @@ cat << _EOF_
       </ul>
       $(nav)
 
-      <footer><span><a href="/">home</a> - <a href="/about.html">about</a> - generated with <a href="https://github.com/hmngwy/jenny">jenny</a></span></footer>
+      <footer><span><a href="/">home</a> - <a href="/about.html">about</a> - generated with <a href="https://github.com/hmngwy/jenny">jenny</a> - <a href="https://github.com/hmngwy/blog">src</a></span></footer>
     </div>
   </body>
 </html>
