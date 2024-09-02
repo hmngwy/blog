@@ -1,4 +1,4 @@
-name: "build blog jenny"
+name: "jenny build"
 
 on: [push, workflow_dispatch]
 
