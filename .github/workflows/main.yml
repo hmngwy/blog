@@ -1,3 +1,5 @@
+name: "build blog jenny"
+
 on: [push]
 
 jobs:
