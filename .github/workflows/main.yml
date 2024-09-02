@@ -7,7 +7,7 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     - name: Build to .dist
-      uses: hmngwy/jenny@master
+      uses: hmngwy/jenny@v1.2.2
     - name: Publish
       uses: JamesIves/github-pages-deploy-action@4.1.1
       with:
