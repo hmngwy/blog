@@ -12,7 +12,7 @@ function index_loop {
 function list_item {
   if [ -z "$BREAK" ]; then
 cat << _LOOP_
-<li class="post-link $([ $InNext ] && echo "in-next")"><a href="$(echo $URL_PREFIX)$(echo $POST_URL)"><span class="stamp">$(date -d "$POST_DATE_RFC822" +%m/%d/%Y)</span> <span class="title">$(echo $POST_TITLE)</span></a></li>
+<li class="post-link $([ $InNext ] && echo "in-next")"><a href="$(echo $URL_PREFIX)$(echo $POST_URL)"><span class="stamp">$(echo "$POST_DATE_RFC822")</span> <span class="title">$(echo $POST_TITLE)</span></a></li>
 _LOOP_
   else
     InNext=true
